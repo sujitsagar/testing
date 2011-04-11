@@ -1,0 +1,15 @@
+
+<div class="stats">
+<table summary="User Product stats">
+<tr>
+<td>
+<a href="<%= users_product_path(@product) %>">
+<span id="following" class="stat">
+<%= @product.users.count %> likers
+</span>
+</a>
+</td>
+</tr>
+</table>
+</div>
+

@@ -1,0 +1,2 @@
+class FileuploadController < ApplicationController
+end

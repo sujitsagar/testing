@@ -1,0 +1,15 @@
+<% @user ||= current_user %>
+<div class="stats">
+<table summary="User Product stats">
+<tr>
+<td>
+
+<span id="productlikes" class="stat">
+<%= @user.products.count %> products
+</span>
+ 
+</td>
+</tr>
+</table>
+</div>
+

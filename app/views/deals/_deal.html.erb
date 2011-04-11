@@ -1,0 +1,11 @@
+<tr><td>
+    <%= image_tag( deal.image, :alt=> "Deal Image", :width => 150, :height => 180) %><br/>
+    <%= deal.name %> in <%= City.find(deal.city_id).cityname %><br/>
+    <p><b> Deatails:</b><%= deal.details %></p><br/>
+    <%= link_to 'Show', deal %>
+    <% if current_user.admin? %>
+    <%= link_to 'Edit', edit_deal_path(deal) %>
+    <%= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+    <br/><br/>
+</td></tr>

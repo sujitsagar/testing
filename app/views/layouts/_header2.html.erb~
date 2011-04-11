@@ -1,0 +1,19 @@
+	<div id="infolink">
+<table><tr>
+	<td><div class="rounded" id="button">
+		<a href="<%= following_user_path(current_user) %>">
+			<table width="106" height="32"><tr><td>
+				<img src="/images/friends.png"></td>
+				<td align="left">Friends</td>
+			</tr></table>
+		</a>
+	</div></td>
+	<td><div class="rounded" id="button">
+		
+			<table width="106" height="32"><tr><td></td>
+				<a href="<%= user_path(current_user) %>">Profile</a></td>
+			</tr></table>
+		
+	</div></td></tr>
+</table>
+				</div>

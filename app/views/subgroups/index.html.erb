@@ -1,0 +1,13 @@
+<% i = 0 %>
+<table border='1' cols='3' rows='3'>
+<% @subgroups.each do |group| %>
+<tr><td>
+<%= image_tag( group.cate1image , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
+<br/>
+<%= group.id %>
+<b style='font-size:16px;'><%= link_to group.subgroup, group %></b><br/>
+<b style='font-size:14px;'><%= pluralize( group.products.count, " Product" ) %></b>
+<%= i = i +1 %>
+</td></tr>
+<% end %>
+</table>

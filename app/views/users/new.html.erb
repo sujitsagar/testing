@@ -1,0 +1,61 @@
+<h1>Sign up</h1>
+<%= form_for(@user) do |f| %>
+ <%= render 'shared/error_messages' ,:object => f.object %>
+ <% @cities = City.all %>
+ <% cou = @cities.count %>
+ <% arr = Array.new(cou) { Array.new(2) } %>
+ <% for n in 1..cou %>
+ <% arr[n-1][0] = @cities[n-1].cityname %>
+ <% arr[n-1][1] = n %>
+ <% end %>
+ <% arr %>
+  <div class="field">
+  <table border="0" width="400">
+  
+    <TR><TD width="">
+    First Name
+    </td><td width="50%">
+    <%= f.text_field :name %>
+    </TD></TR>
+ 
+ 
+    <TR><TD>
+    Last Name</td><td>
+    <%= f.text_field :lastname %></TD></TR>
+ 
+    <TR><TD>
+    <%= f.label :email %></td><td>
+    <%= f.text_field :email %></TD></TR>
+ 
+   <TR><TD>
+  <%= f.label :password %></td><td>
+  <%= f.password_field :password %></TD></TR>
+ 
+   <TR><TD>
+  <%= f.label :password_confirmation, "Confirmation" %></td><td>
+  <%= f.password_field :password_confirmation %></TD></TR>
+ 
+   <TR><TD>
+    <%= f.label :city %></td><td>
+    <%= f.select(:city_id, arr ) %></TD></TR>
+
+    <TR><TD>
+    <%= f.label :sex %></td><td>
+    <%= f.select( :sex, [["Male", "Male"], ["Female", "Female"]])%></TD></TR>
+
+    <TR><TD>
+    <%= f.label :birthday_date %></td><td>
+    <%= f.date_select( :birthday_date,:date_separator => "-" , :start_year => 1960 ) %></TD></TR>
+ <TR><TD>
+    <%= f.label :profession %></td><td>
+    <%= f.text_field :profession %></TD></TR>
+  <TR><TD>
+    <%= f.label :company %></td><td>
+    <%= f.text_field :company %></TD></TR>
+ 
+  </table></div>
+<div class="actions">
+<%= f.submit "Sign up" %>
+</div>
+<% end %>
+<p>Already Signed up? <%= link_to "Login", signin_path %></p>

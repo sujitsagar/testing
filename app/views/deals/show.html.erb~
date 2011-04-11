@@ -1,0 +1,162 @@
+<% @max=@deal.maxattenders %>
+<% @cou=@deal.attendances.count %>
+<% @dis=@deal.discount %>
+<% @diff=@max.to_i - @cou.to_i %>
+<% @saved = @dis.to_i * @cou.to_i %>
+<style type="text/css">
+p{
+	color: #666;
+	font-size: 10px;
+	padding: 0em .5em;
+}
+#pricetag{
+	width: 113px;
+	height: 80px;
+	background-color: #dae9ea;
+}
+#infoheader{
+	width: 100%;
+	height: 17px;
+	background-color: #dae9ea;
+	margin: 2px 0px 0px 0px;
+	padding: 3px 0px 0px 4px;
+}
+.dealimage{
+	width: 404px;
+	height: 250px;
+	border: 1px solid #b3b3b3;
+	background: url("/images/current_deal.png") no-repeat;
+}
+.transbox
+  {
+  width: 100%;
+  height: 40px;
+  margin: 187px 0px 0px 0px;
+  background-color: #000000;
+  
+  }
+.attendbox{
+ font-size:18px;
+ font-weight:bold;
+ color:#fff;
+        background:transparent;
+	height: 25px;
+	right:0;
+	top:0;
+	border: 0px;
+	margin-right: 0px;
+}
+</style>
+
+<div  style="padding:20px 20px 20px 20px;">
+	<div style="width: 100%;">
+			<div style="width: 100%; height: 271px;">
+				<div  class="box1" style="margin: 0px;">
+					<div style="width: 378px; height: 80px; text-align: center;">
+						<div class="box1 rounded" id="pricetag">
+							<font size=3 color=#000000><b>
+								Original Price
+							</b></font>
+								<table width="113" height="40"><tr><td align="right">
+									<img src="/images/rupee.png"></td>
+									<td align="left"><font size=3 color=#000000><b>
+										<%= @deal.orignalprice %>
+									</b></font></td>
+								</tr></table>
+						</div>
+						<div class="box1 rounded" id="pricetag">
+							<font size=3 color=#000000><b>
+								You Save
+							</b></font>
+								<table width="113" height="40"><tr><td align="right">
+									<img src="/images/rupee.png"></td>
+									<td align="left"><font size=3 color=#000000><b>
+										<%= @deal.discount %>
+									</b></font></td>
+								</tr></table>
+						</div>
+						<div class="box1 rounded" id="pricetag">
+							<font size=3 color=#000000><b>
+								Price for you
+							</b></font>
+								<table width="113" height="40"><tr><td align="right">
+									<img src="/images/rupee.png"></td>
+									<td align="left"><font size=3 color=#000000><b>
+							<%= @deal.orignalprice.to_i - @deal.discount.to_i %>
+									</b></font></td>
+								</tr></table>
+						</div>
+					</div>
+					<div style="width: 256px; height: 191px; margin: 0px 0px 0px 122px;">
+						<div id="ratingboxsmall"></div>
+						<div style="width: 167px; height: 28px; text-align: center; padding: 12px 0px 0px 0px;">
+		<font size=2 color=#247885><b><%= @cou=@deal.attendances.count %> bought,</b></font>
+		<font size=2 color=#990000><b>
+<% if @diff > 0 %><%= @diff %><% else %>0<% end %> left</b></font></div>
+						<div class="rounded" style="background-color: #990000; width: 167px; height: 41px; text-align: center; padding: 12px 0px 0px 0px;">
+								
+<%= render 'deals/dealattend_form' %>
+						</div>
+						<div style="width: 167px; height: 40px;">
+						<p>Limited quantity available<br/> Starting from 7th April</p>
+						</div>
+					</div>
+				</div>
+				<div  class="box1">
+					<div style="width: 404px; height: 15px; text-align: right;">
+						<font size=2 color=#247885><b>Total money saved:</b></font>
+						<font size=2 color=#b3b3b3><b>Rs <%= @saved %></b></font>
+					</div>
+					<div class="dealimage">
+						<div class="like-container">
+							<span class="like-container-overlay"></span>
+							<div>
+								<%= render 'deals/deallike_form' %>
+							</div>
+							<div class="transbox">
+								<table width="100%" height="100%"><tr><td align="left"><font size=2 color=#FFF><b>
+			<%= pluralize( @deal.deallikes.count, "Like") %>
+									</b></font></td><td align="right"><font size=2 color=#FFF><b>
+										Share with friends
+									</b></font></td>
+								</tr></table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rounded" style="width: 100%; height: 99px; background-color: #337f93; margin: 8px; text-align: center;">
+				<font size=2 color=#FFF><b><br/><%= @deal.info1 %> </b></font>
+			</div>
+			<div style="width: 225px; height: 61px; background-color: #dae9ea; margin: 10px 0px 0px 10px;">
+				Ends At : <%= @deal.endat  %><br/>
+                                Starts At : <%= @deal.startat  %>
+			</div>
+	</div>
+	<div style="width: 100%;">
+			<div style="width: 100%; min-height: 100px;">
+				<div id="infoheader"><font size=2 color=#247885><b>Terms & Conditions</b></font></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p><%= @deal.terms %> </p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div id="infoheader"><font size=2 color=#247885><b>About the Deal</b></font></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p><%= @deal.aboutdeal %></p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div id="infoheader"><font size=2 color=#247885><b>About <%= @deal.name %></b></font></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p><%= @deal.info2 %></p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div id="infoheader"><font size=2 color=#247885><b>Address & Location</b></font></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p><%= @deal.terms %> </p>
+				</div>
+			</div>
+	</div>
+</div>

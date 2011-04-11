@@ -1,0 +1,78 @@
+
+
+<%= render 'maingroups/index' %>
+
+<% i = 0 %>
+<br/>
+<h2><%=  @maingroup.maingroup %></h2>
+<%  cou = @maingroup.subgroups.count %>
+<% arr = Array.new(cou) { Array.new(2) } %>
+<% for k in 1..cou %>
+<% arr[k-1][0] = @subgroups[k-1].subgroup.at(0) %>
+<% arr[k-1][1] = @subgroups[k-1].id %>
+<% end %>
+<% arr[0][0] %>
+
+<div id="container2">
+		<h4>Browse by Categories</h4>
+		<div id="quicknavigation">
+			<p>
+				<a href="#listA">A</a>
+				<a href="#listB">B</a>			
+				<a href="#listC">C</a>			
+				<a href="#listD">D</a>			
+				<a href="#listE">E</a>
+				<a href="#listF">F</a>			
+				<a href="#listG">G</a>			
+				<a href="#listH">H</a>			
+				<a href="#listI">I</a>			
+				<a href="#listJ">J</a>			
+				<a href="#listK">K</a>			
+				<a href="#listL">L</a>			
+				<a href="#listM">M</a>			
+				<a href="#listN">N</a>			
+				<a href="#listO">O</a>	
+				<a href="#listP">P</a>			
+				<a href="#listQ">Q</a>			
+				<a href="#listR">R</a>			
+				<a href="#listS">S</a>			
+				<a href="#listT">T</a>			
+				<a href="#listU">U</a>	
+				<a href="#listV">V</a>			
+				<a href="#listW">W</a>			
+				<a href="#listX">X</a>			
+				<a href="#listY">Y</a>			
+				<a href="#listZ">Z</a>			
+			</p>
+		</div>
+
+		<div id="list">
+
+<table border=0 cellspacing="40" cellpadding="40">
+<% disp1= 0 %>
+<tr>
+<% for k in "A".."Z" %>
+<% disp = 0 %>
+<% for j in 1..cou %>
+<% if k==arr[j-1][0] %><% disp += 1 %><% end %>
+<% end %>
+
+<% if disp != 0 %>
+<td>
+<br/>
+<a name="list<%= k %>"><%= k %></a><br/>
+<% end %>
+
+<% for j in 1..cou %>
+<% if k==arr[j-1][0] %>
+<% arr[j-1][0] %>
+<%= link_to Subgroup.find(arr[j-1][1]).subgroup, Subgroup.find(arr[j-1][1]) %> <br/>
+<% end %>
+<% end %>
+<% if disp != 0 %><% disp1 += 1 %><% end %>
+</td>
+<% if disp1 == 6 %></tr><tr><% disp1=0 %><% end %>
+<% end %>
+</tr>
+</table>
+</div></div>

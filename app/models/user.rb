@@ -1,0 +1,128 @@
+# == Schema Information
+# Schema version: 20110322135505
+#
+# Table name: users
+#
+#  id                 :integer(4)      not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  admin              :boolean(1)
+#
+
+class User < ActiveRecord::Base
+
+    attr_accessor :password
+    attr_protected :admin #:name, :email, :password, :password_confirmation, :photo, :sex, :ph
+    
+    belongs_to :city
+    
+    has_many :microposts, :dependent => :destroy
+    has_many :relationships, :foreign_key => "follower_id",
+                             :dependent => :destroy
+    has_many :following, :through => :relationships, :source => :followed
+    has_many :reverse_relationships, :foreign_key => "followed_id",
+                                     :class_name => "Relationship",
+                                     :dependent => :destroy
+    has_many :followers, :through => :reverse_relationships, :source => :follower
+    #for products and users associations
+    has_many :productlikes, :dependent => :destroy
+    has_many :products, :through => :productlikes
+    
+    has_many :deallikes, :dependent => :destroy
+    has_many :deals, :through => :deallikes
+   
+    has_many :merchantlikes, :dependent => :destroy
+    has_many :merchants, :through => :merchantlikes
+
+    has_many :productcomments, :dependent => :destroy
+    has_many :products, :through => :productcomments
+
+    has_many :merchantcomments, :dependent => :destroy
+    has_many :merchants, :through => :merchantcomments
+    
+    has_many :attendances, :dependent => :destroy
+    has_many :deals, :through => :attendances
+
+    has_attached_file :photo,
+     :styles => { :thumb=> "100x100#", :small  => "400x400>" }
+     
+    
+    email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    
+    validates :name,  :presence => true
+                     #:length => { :within => 5..45 }
+    #validates :lastname,  :presence => true
+    validates :email, :presence => true,
+                     :format => { :with => email_regex },
+                     :uniqueness => { :case_sensitive => false }
+    #validates :city, :presence => true
+    # Automatically create the virtual
+    validates :password, :presence => true,
+                         :confirmation => true
+    #                     :length => { :within => 6..40 }
+                         
+    before_save :encrypt_password
+    #validates :city_id,  :presence => true
+    #validates :sex,  :presence => true
+    #validates :birthday_date,  :presence => true
+    #validates :profession,  :presence => true
+    
+    def has_password?(submitted_password)
+         encrypted_password == encrypt(submitted_password)
+    end
+ 
+    def self.authenticate(email, submitted_password)
+         user = find_by_email(email)
+         return nil if user.nil?
+         return user if user.has_password?(submitted_password)
+    end
+    def self.authenticate_with_salt(id, cookie_salt)
+         user = find_by_id(id)
+         (user && user.salt == cookie_salt) ? user : nil
+    end
+    def feed
+         Micropost.from_users_followed_by(self)
+         #Productlikes.from_prod 
+    end
+    def profeed
+         Productlike.from_users_followed_by(self)
+         #Productlikes.from_prod 
+    end
+    def following?(followed)
+         relationships.find_by_followed_id(followed)
+    end
+    def follow!(followed)
+         relationships.create!(:followed_id => followed.id)
+    end
+    def unfollow!(followed)
+         relationships.find_by_followed_id(followed).destroy
+    end
+    def toggle!(field)
+  	send "#{field}=", !self.send("#{field}?")
+  	save :validate => false
+    end
+
+
+   
+    private
+    def encrypt_password
+         return if password.nil?
+         self.salt = make_salt if new_record?
+         self.encrypted_password = encrypt(password)
+    end
+    def encrypt(string)
+         secure_hash("#{salt}-1-#{string}")
+    end
+    def make_salt
+         secure_hash("#{Time.now.utc}-1-#{password}")
+    end
+    def secure_hash(string)
+         Digest::SHA2.hexdigest(string)
+    end
+
+     
+end

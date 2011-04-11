@@ -1,0 +1,15 @@
+<style>
+#dealattend_form{
+	background-color: #990000;
+	width: 100%;
+	text-align: center;
+}
+</style>
+<div id="dealattend_form">
+<% if @deal.dealattended?(current_user) %>
+<b style="font-size:15px;color:#fff"><%= "You have Bought This" %></b>
+<% else %>
+<%= render 'dealattend' %>
+<% end %>
+</div>
+

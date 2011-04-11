@@ -1,0 +1,84 @@
+
+
+
+<style type="text/css">
+p{
+	color: #666;
+	font-size: 10px;
+	padding: 0em .5em;
+}
+</style>
+<div id="container2">
+<h2 align="left"> Cheaps Feed -> Today's Deal </h2>
+	<div style="width: 100%; min-height: 492px;">
+			<div style="width: 100%; height: 271px;">
+				<div  class="box1" style="margin: 0px;">
+					<div style="width: 378px; height: 80px;">
+						<div class="box1 roundedge" style="width: 113px; height: 80px;">
+							Original Price
+						</div>
+						<div class="box1 roundedge" style="width: 113px; height: 80px;">
+							You Save
+						</div>
+						<div class="box1 roundedge" style="width: 113px; height: 80px;">
+							Price for you
+						</div>
+					</div>
+					<div style="width: 256px; height: 191px; margin: 0px 0px 0px 122px;">
+						<div id="ratingboxsmall"></div>
+						<div style="width: 167px; height: 40px;">10 bought, 4 left</div>
+						<div class="roundedge" style="background-color: #C12283; width: 167px; height: 53px;">Buy Now</div>
+						<div style="width: 167px; height: 40px;">
+						<p>Limited quantity available<br/> Starting from 7th April</p>
+						</div>
+					</div>
+				</div>
+				<div  class="box1" style="margin: 0px;">
+					<div style="width: 404px; height: 15px; text-align: right;">
+						Total money saved
+					</div>
+<div style="width: 404px; height: 253px; border: 1px solid black;">
+<%= render 'deals/dstats' %>
+<%= render 'dealattend_form' if signed_in? %>
+<%= image_tag( @deal.image , :alt => "Current Deal Image", :width=> 404, :height => 183) %>
+
+
+</div>
+				</div>
+			</div>
+			<div class="roundedge" style="width: 90%; height: 99px; background-color: #151B54; margin: 10px;">
+				Text Box
+			</div>
+			<div style="width: 225px; height: 61px; background-color: #c8e8c0; margin: 10px 0px 0px 10px;"> Timer</div>
+	</div>
+	<div style="width: 100%; min-height: 492px;">
+			<div style="width: 100%; min-height: 100px;">
+				<div style="width: 100%; height: 20px; background-color: #c8e8c0;"><p>Terms & Conditions</p></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p>ÉÉÉÉÉÉ..kdberagvb n;hbkln ;khghb nkndfknv nkd;fvnk ndkvbncbb vk nmcvlfbvlkbv vf
+				bnknflbnnbn;bkngn;;lkbgnb mlml</p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div style="width: 100%; height: 20px; background-color: #c8e8c0;"><p>About the Deal</p></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p>ÉÉÉÉÉÉ..kdberagvb n;hbkln ;khghb nkndfknv nkd;fvnk ndkvbncbb vk nmcvlfbvlkbv vf
+				bnknflbnnbn;bkngn;;lkbgnb mlml</p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div style="width: 100%; height: 20px; background-color: #c8e8c0;"><p>About XYZ Spa</p></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p>ÉÉÉÉÉÉ..kdberagvb n;hbkln ;khghb nkndfknv nkd;fvnk ndkvbncbb vk nmcvlfbvlkbv vf
+				bnknflbnnbn;bkngn;;lkbgnb mlml</p>
+				</div>
+			</div>
+			<div style="width: 100%; min-height: 100px;">
+				<div style="width: 100%; height: 20px; background-color: #c8e8c0;"><p>Address & Location</p></div>
+				<div style="width: 100%; min-height: 80px;">
+				<p>ÉÉÉÉÉÉ..kdberagvb n;hbkln ;khghb nkndfknv nkd;fvnk ndkvbncbb vk nmcvlfbvlkbv vf
+				bnknflbnnbn;bkngn;;lkbgnb mlml</p>
+				</div>
+			</div>
+	</div>
+</div>

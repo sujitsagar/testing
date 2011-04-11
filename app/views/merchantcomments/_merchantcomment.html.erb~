@@ -1,0 +1,13 @@
+<tr>
+<td class="micropost">
+<span class="content"><%= productcomment.content %></span>
+<span class="timestamp">Posted <%= time_ago_in_words(productcomment.created_at) %> ago.
+</span>
+<% if current_user?(productcomment.user) %>
+<%= link_to "delete", productcomment, :method => :delete,
+:confirm => "You sure?",
+:title => productcomment.content %>
+</td>
+<% end %>
+</tr>
+

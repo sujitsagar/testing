@@ -1,0 +1,29 @@
+<%= render 'maingroups/index' %>
+
+<div id= "container2" >
+
+<h2><%= link_to @maingroup.maingroup, @maingroup %> &nbsp; &nbsp;&nbsp; >> &nbsp;&nbsp;&nbsp; <%= @subgroup.subgroup %> </h2>
+<br/>
+<% len = @products.length %>
+<table cellspacing="18" border="0" cellpadding="2" align="center">
+<tr><% disp = 0 %>
+<% for n in 1..len %>
+<td>
+<% group = @products[n-1] %>
+<% if !group.nil? %>
+<% disp += 1 %>
+<table border="0" width=180 cellpadding=5  style="text-align:center;border: 1px solid #247885;"><tr><td>
+<%= image_tag( group.productimage , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
+</td></tr><tr><td>
+<b style='font-size:13px;'><%= link_to group.productname, group %></b><br/>
+<b style='font-size:11px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b><br/>
+<b><%= "Genre" %></b> :<%= group.subgroup.subgroup %> <br/>
+<b><%= "Author" %></b> :<%= group.subgroup.subgroup %> 
+</td></tr></table>
+<% end %>
+</td>
+<% if disp == 4 %></tr></tr><% disp=0 %><% end %>
+<% end %>
+</tr>
+</table>
+</div>

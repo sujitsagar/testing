@@ -1,0 +1,101 @@
+
+
+<%= render 'maingroups/index' %>
+
+<% i = 0 %>
+<br/>
+<h2><%=  @maingroup.maingroup %></h2>
+<% if params[:sortby] == "genre" %><%  sort=2 %><% else %><% sort=1 %><% end %>
+<%  cou1 = @maingroup.subgroups.count %>
+<% mainarr= Array.new(cou1) %>
+<% for k in 1..cou1 %>
+<% if sort == 1 %>
+<% mainarr[k-1] = @subgroups[k-1].cate2 %>
+<% else %>
+<% mainarr[k-1] = @subgroups[k-1].cate1 %>
+<% end %>
+<% end %>
+<% mainarr = mainarr.uniq %>
+<% cou = mainarr.count %>
+<% arr = Array.new(cou) { Array.new(2) } %>
+<% for k in 1..cou %>
+<% arr[k-1][0] = mainarr[k-1].at(0) %>
+<% if sort == 1 %>
+<% arr[k-1][1] = Subgroup.where("cate2=?", mainarr[k-1] )[0].id %>
+<% else %>
+<% arr[k-1][1] = Subgroup.where("cate1=?", mainarr[k-1] )[0].id %>
+<% end %>
+<% end %>
+<% arr[0][0] %>
+
+<div id="container2">
+		<h4>Browse by Categories</h4>
+		<div id="quicknavigation">
+			<p>
+				<a href="#listA">A</a>
+				<a href="#listB">B</a>			
+				<a href="#listC">C</a>			
+				<a href="#listD">D</a>			
+				<a href="#listE">E</a>
+				<a href="#listF">F</a>			
+				<a href="#listG">G</a>			
+				<a href="#listH">H</a>			
+				<a href="#listI">I</a>			
+				<a href="#listJ">J</a>			
+				<a href="#listK">K</a>			
+				<a href="#listL">L</a>			
+				<a href="#listM">M</a>			
+				<a href="#listN">N</a>			
+				<a href="#listO">O</a>	
+				<a href="#listP">P</a>			
+				<a href="#listQ">Q</a>			
+				<a href="#listR">R</a>			
+				<a href="#listS">S</a>			
+				<a href="#listT">T</a>			
+				<a href="#listU">U</a>	
+				<a href="#listV">V</a>			
+				<a href="#listW">W</a>			
+				<a href="#listX">X</a>			
+				<a href="#listY">Y</a>			
+				<a href="#listZ">Z</a>			
+			</p>
+                        
+		</div>
+<div align="right" style="padding-right:20px;"> <h3>Sort by: &nbsp;&nbsp;&nbsp;<a href="/maingroups/<%= params[:id] %>?sortby=genre">Genre</a> &nbsp;&nbsp;&nbsp; <a href="/maingroups/<%= params[:id] %>?sortby=author">Author</a></h3> </div>
+<br/>
+		<div id="list">
+
+<table border=0 cellspacing="0" cellpadding="3" width="100%">
+<% disp1= 0 %>
+<tr>
+<% for k in "A".."Z" %>
+<% disp = 0 %>
+<% for j in 1..cou %>
+<% if k==arr[j-1][0] %><% disp += 1 %><% end %>
+<% end %>
+
+<% if disp != 0 %>
+<td>
+<br/>
+<a name="list<%= k %>"><%= k %></a><br/>
+<% end %>
+
+<% for j in 1..cou %>
+<% if k==arr[j-1][0] %>
+<% arr[j-1][0] %>
+<% if sort == 1 %>
+<%= link_to Subgroup.find(arr[j-1][1]).cate2, Subgroup.find(arr[j-1][1]) %> <br/>
+<% else %>
+<%= link_to Subgroup.find(arr[j-1][1]).cate1, Subgroup.find(arr[j-1][1]) %> <br/>
+<% end %>
+
+<% end %>
+<% end %>
+<% if disp != 0 %><% disp1 += 1 %><% end %>
+</td>
+<% if disp1 == 5 %></tr><tr><% disp1=0 %><% end %>
+<% end %>
+</tr>
+</table>
+<br/><br/><br/>
+</div></div>

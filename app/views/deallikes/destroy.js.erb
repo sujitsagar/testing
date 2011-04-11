@@ -1,0 +1,3 @@
+$("products_form").update("<%= escape_javascript(render('products/productlike')) %>")
+$("productlikes").update('<%= "#{@product.users.count} likers" %>')
+

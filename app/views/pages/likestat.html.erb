@@ -1,0 +1,63 @@
+<h4> Products with top number of likers in total </h4>
+<% @products.count %>
+<% su = @products.count %>
+
+<% rows, cols = su,2 %>
+<% mat = Array.new(rows) { Array.new(cols) } %>
+<% a = [] %>
+
+<% @products.each do |product| %>
+<% mat[product.id-1][0] = product.id %>
+<% if ( product.productlikes.count != 0 ) %>
+<% mat[product.id-1][1] = product.productlikes.count %>
+<% else %>
+<% mat[product.id-1][1] = 1 %>
+<% end %>
+<% end %>
+<% c = mat.sort {|hash_a,hash_b| hash_b[1] <=> hash_a[1] } %>
+
+<% var1 = c[0..4] %>
+<table border=0 align="center" style='padding-left:50px;' class='likestat'>
+<% for n in 0..4 %>
+<% id = var1[n][0]%>
+<% @product = Product.find_by_id(id) %>
+
+<tr><td>
+
+<b><%= link_to @product.productname, @product %></b><br/>
+<%= pluralize( @product.productlikes.count, "liker") %> <br/>
+</td></tr>
+<% end %>
+</table>
+<% n = @user.following.count %>
+<% stat1 = Array.new(n) %>
+<% sujit = Array.new %>
+<% for i in 1..n %>
+<% stat1[i-1] = @user.following[i-1].id %>
+<% m = User.find(stat1[i-1]).productlikes.count %>
+<% for j in 1..m %>
+<% sujit.insert(0,User.find(stat1[i-1]).productlikes[j-1].id) %>
+<% end %>
+<% end %>
+<br/>
+<% sujit %><br/>
+<% pa= Product.all.count %>
+<% final = Array.new(pa) { Array.new(2) } %>
+<% for k in k=1..pa %>
+<% final[k-1][0] = k %>
+<% final[k-1][1] = sujit.count(k) %>
+<% end %>
+<% final1 = final.sort {|hash_a,hash_b| hash_b[1] <=> hash_a[1] } %>
+<h4> Top products liked in your following  </h4>
+<% var2 = final1[0..4] %>
+<table border=0 align="center" style='padding-left:50px;' class='likestat' >
+<% for n in 0..4 %>
+<% id = var2[n][0]%>
+<% @product = Product.find_by_id(id) %>
+<tr><td>
+
+<b><a href="<%= product_path(@product) %>"><%= @product.productname %></a></b><br/>
+<%= pluralize( var2[n][1], "liker") %> <br/>
+</td></tr>
+<% end %>
+</table>

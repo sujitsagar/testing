@@ -1,0 +1,14 @@
+<table summary="Information about Productlikers">
+<tr>
+<td class="main">
+<h1><%= @title %></h1>
+<% unless @products.empty? %>
+<ul class="users">
+<%= render @products %>
+</ul>
+<%= will_paginate @products %>
+<% end %>
+</td>
+
+</tr>
+</table>

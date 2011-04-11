@@ -1,0 +1,11 @@
+<%= form_for @merchantcomment do |f| %>
+<%= render 'shared/error_messages', :object => f.object %>
+<div class="field">
+<%= f.text_area( :content, :size => "57x4" ,  :maxlength => 220 ) %>
+</div>
+<input id="merchantcomment_merchant_id" name="merchantcomment[merchant_id]" type="hidden" value="<%= @merchant.id %>" />
+<div class="actions">
+<%= f.submit "Submit" %>
+</div>
+<% end %>
+

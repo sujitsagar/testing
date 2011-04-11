@@ -1,0 +1,243 @@
+#welcometopbar {
+    width: 100%;
+    min-width:1000px;
+    height: 150px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: -1; 
+    background: url("../images/welcome_header.jpg") no-repeat;
+}
+
+#welcomewrap {
+    margin:150 auto;
+    padding:10px 40px;
+    position: fixed;
+}
+
+#topbar {
+    width: 100%;
+    height: 47px; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+    background: url("../images/header.jpg") no-repeat;
+}
+
+#header {
+    margin: 0px auto;
+    width: 1104px;
+    height: 47px;
+    color: white;
+}
+
+#header a:link {
+    color: white;
+}
+
+
+#wrap {
+    margin: 12px auto;
+    width: 1104px;
+    height: 800px;
+    border: 1px solid transparent;
+}
+
+#leftsidebar {
+    position: fixed;
+}
+
+#leftheader {
+    width: 225px;
+    height: 90px;
+    background: url("../images/logosmall.png") no-repeat;
+}
+
+#leftcontent {
+    width: 225px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#userbox{
+    width: 225px;
+    height: 200px;
+    background-color: #fbfbfa;
+}
+#userinfo{
+    width: 225px;
+    height: 155px;
+}
+
+#infolink{
+    width: 225px;
+    height: 32px;
+}
+
+#button{
+    width: 106px;
+    height: 32px;
+    background: url("../images/button.png") no-repeat;
+    margin: 0px 4px 0px 0px;
+}
+
+#button a:link
+    {
+    display:block;
+    font-weight:bold;
+    color: #227784;
+    text-align: center;
+    width: 106px;
+    height: 32px;
+}
+
+#button a:hover,a:active,a:visited{
+    background: url("../images/button_selected.png") no-repeat;
+    color: white;
+}
+
+#leftfooter{
+    width: 225px;
+    min-height: 300px;
+    overflow:hidden;
+    margin: 30px 0px 0px 0px;
+}
+
+#leftfootertabs{
+    width: 232px;
+    height: 44px;
+    background: url("../images/leftfootertabs.png") no-repeat;
+    margin: 0px 0px 9px 0px;
+}
+
+#leftfootertabs a:link
+    {
+    display:block;
+    font-weight:bold;
+    color:#227784;
+    text-align: center;
+    padding: 0px 0px;
+}
+
+#leftfootertabs a:hover,a:active,a:visited{
+    display:block;
+    font-weight:bold;
+    width: 232px;
+    height: 44px;
+    text-align: center;
+    background: url("../images/leftfootertabs_selected.png") no-repeat;
+    color: white;
+}
+
+.feedbox{
+    width: 149px;
+    height: 234px;
+    border: 1px solid #ccc;
+    margin: 0px 0px 0px 10px;
+}
+
+#container1{
+    margin: 90px 0px 0px 237px;
+    width: 867px;
+    height: 48px;
+    position: fixed;
+    z-index: 2;
+}
+
+#container2{
+    margin: 2px 12px 0px 0px;
+    padding: 20px 26px 0px 26px;
+    width: 867px;
+    min-height: 800px;
+    background-color: #f4f9f9;
+}
+
+#tabs{
+    width: 468px;
+    height: 47px;
+    margin: 0px 0px 0px 399px;
+    position: absolute;
+}
+
+#tabbutton{
+    width: 154px;
+    height: 47px;
+    background: url("../images/tab.png") no-repeat;
+    padding: 0px 2px 0px 2px;
+}
+
+#tabbutton a:link
+    {
+    display:block;
+    font-weight:bold;
+    text-align: center;
+    color: #227784;
+    text-decoration: none;
+}
+
+#tabbutton a:hover, a:active, a:visited{
+    width: 154px;
+    height: 47px;
+    color: white;
+    text-align: center;
+    background: url("../images/tabbutton_selected.png") no-repeat;
+}
+
+#tabbutton a:current{
+    width: 154px;
+    height: 47px;
+    color: white;
+    text-align: center;
+    background: url("../images/tabbutton_selected.png") no-repeat;
+}
+
+
+#wrap2{
+    margin: 138px 0px 0px 237px;
+    min-height: 600px;
+    width: 867px;
+    position: relative;
+    overflow: auto;
+    border: 1px solid red;
+}
+
+#productimage{
+    width: 106px;
+    height: 105px;
+    border: 1px solid #247885;
+    margin: 19px 22px 0px 22px;
+}
+
+#likes{
+    width: 106px;
+    height: 40px;
+    margin: 0px 22px 0px 22px;
+}
+
+#comment{
+    width: 106px;
+    height: 55px;
+    margin: 3px 22px 0px 22px;
+}
+
+p {
+    font-family: Calibri;
+    color: #247885;
+    font-weight:bold;
+    font-size: 16px;
+}
+
+#product{
+    width: 122px;
+    min-height: 30px;
+    background-color: #c8e8de;
+    margin: 0px 15px 0px 0px;
+}
+
+#quicknavigation{
+	width: 100%;
+	height: 10px;
+}

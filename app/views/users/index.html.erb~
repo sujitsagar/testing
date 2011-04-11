@@ -1,0 +1,22 @@
+
+<div id= "container2" >
+<%= will_paginate @users %>
+<%= len = @users.length %>
+<table cellspacing="18" border="1" cellpadding="2" align="center">
+<tr><% disp = 0 %>
+<% for n in 1..len %>
+<td>
+<% user= @users[n-1] %>
+<%= gravatar_for user, :size => 100 %><br/>
+<%= link_to user.name, user %><br/>
+<% if current_user.admin? %>
+<%= link_to "destroy", user, :confirm => "Are you sure want to delete this user?",:method => :delete , 
+:title => "Delete #{user.name}" %>
+<% end %>
+</td>
+<% disp += 1 %>
+<% if disp == 6 %></tr></tr><% disp=0 %><% end %>
+<% end %>
+</tr>
+</table>
+</div>

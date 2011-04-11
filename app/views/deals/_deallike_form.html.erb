@@ -1,0 +1,9 @@
+
+<div>
+<% if @deal.dealliked?(current_user) %>
+<%= render 'dealunlike' %>
+<% else %>
+<%= render 'deallike' %>
+<% end %>
+</div>
+

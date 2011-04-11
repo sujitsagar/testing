@@ -1,0 +1,33 @@
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Image</th>
+    <th>Details</th>
+    <th></th>
+    <% if current_user.admin? %>
+    <th></th>
+    <th></th>
+    <% end %>
+  </tr>
+
+<% @deals.each do |deal| %>
+  <tr>
+    <td><%= deal.name %></td>
+    <td><%= deal.city_id %></td>
+    <td><%= deal.image %></td>
+    
+    <td><%= link_to 'Show', deal %></td>
+    <% if current_user.admin? %>
+    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+    <td><%= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Deal', new_deal_path %>

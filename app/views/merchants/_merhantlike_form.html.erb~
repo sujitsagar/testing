@@ -1,0 +1,9 @@
+
+<div id="productlike_form">
+<% if @product.productliked?(current_user) %>
+<%= render 'productunlike' %>
+<% else %>
+<%= render 'productlike' %>
+<% end %>
+</div>
+

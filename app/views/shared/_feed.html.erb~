@@ -1,0 +1,6 @@
+
+<div id= "container2" >
+
+<% len = @feed_items.length %>
+
+</div>

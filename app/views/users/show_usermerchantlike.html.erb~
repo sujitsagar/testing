@@ -1,0 +1,38 @@
+
+
+
+<div id= "container2" >
+<%= will_paginate @merchants %>
+<% len = @merchants.length %>
+<table cellspacing="18" border="0" cellpadding="2" align="center">
+<tr><% disp = 0 %>
+<% for n in 1..len %>
+<td>
+<% group = Merchant.find(@merchants[n-1].id) %>
+<% if !group.nil? %>
+
+<% disp += 1 %>
+<table border="0" width=180 cellpadding=5  style="text-align:center;border: 1px solid blue;"><tr><td>
+<%= image_tag( group.merchantimage , :alt => "Group Image", :border => 1 ,:width =>100, :height => 90 ) %>
+</td></tr><tr><td>
+<b style='font-size:10px;'><%= link_to group.merchantname, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.merchantlikes.count, " Liker" ) %></b><br/>
+<% pathak = Merchantlike.where("merchant_id=?", group.id) %>
+<% pathak = pathak + [] %>
+<table height=60 border= width=100% cellspacing=0 cellpadding=0><tr><td>
+<h4 style="text-size:12px;padding:0 0 0 0;margin:0 0 0 0" align='left'>Likes:</h4>
+</td></tr><tr><td>
+<% for z in 0..2 %>
+<%if !pathak[z].nil? %><%= link_to smallgravatar_for(pathak[z].user), pathak[z].user %><% end %>
+<% end %>
+<%= link_to "more", merchant_path(group) %>
+</td></tr>
+</td></tr></table>
+</td></tr></table>
+<% end %>
+</td>
+<% if disp == 4 %></tr></tr><% disp=0 %><% end %>
+<% end %>
+</tr>
+</table>
+</div>

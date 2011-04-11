@@ -1,0 +1,90 @@
+<%= form_for(@deal) do |f| %>
+  <% if @deal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+
+      <ul>
+      <% @deal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% @cities = City.all %>
+ <% cou = @cities.count %>
+ <% arr = Array.new(cou) { Array.new(2) } %>
+ <% for n in 1..cou %>
+ <% arr[n-1][0] = @cities[n-1].cityname %>
+ <% arr[n-1][1] = n %>
+ <% end %>
+ <% arr %>
+<table><TR><TD> 
+  <div class="field">
+    <%= f.label :name %></TD><td>
+    <%= f.text_field :name %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :city_id %></TD><td>
+    <%= f.text_field :city_id %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :image %></TD><td>
+    <%= f.text_field :image %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :orignalprice %></TD><td>
+    <%= f.text_field :orignalprice %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :discount %></TD><td>
+    <%= f.text_field :discount %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :maxattenders %></TD><td>
+    <%= f.text_field :maxattenders %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :info1 %></TD><td>
+    <%= f.text_area :info1 %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :terms %></TD><td>
+    <%= f.text_area :terms %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :aboutdeal %></TD><td>
+    <%= f.text_area :aboutdeal %>
+  </div><br />
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :info2 %></TD><td>
+    <%= f.text_area :info2 %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :address %></TD><td>
+    <%= f.text_area :address %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :startat %></TD><td>
+    <%= f.datetime_select :startat %>
+  </div>
+</td></tr><tr><td>
+  <div class="field">
+    <%= f.label :endat %></TD><td>
+    <%= f.datetime_select :endat %>
+  </div>
+</td></tr></table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

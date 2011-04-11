@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<script src="js/ajax.js" type="text/javascript"></script>
+	<script src="js/jquery-1.2.1.pack.js" type="text/javascript"></script>
+	<script src="js/jquery-easing.1.2.pack.js" type="text/javascript"></script>
+	<script src="js/jquery-easing-compatibility.1.2.pack.js" type="text/javascript"></script>
+	<script src="js/coda-slider.1.1.1.pack.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/slidertab.css">
+	
+	<!-- Initialize each slider on the page. Each slider must have a unique id -->
+	<script type="text/javascript">
+		jQuery(window).bind("load", function() {
+			jQuery("div#slider1").codaSlider()
+		});
+	</script>
+</head>
+<body>
+<div id="topbar">
+	<div id="searchbox"></div>
+</div>
+<div id="wrap">
+	<div id="leftsidebar">
+		<div id="leftheader"></div>
+		<div id="leftcontent">
+			<div id="userinfo">
+				<div id="infolink">
+					<table><tr>
+						<td><div id="button">
+							<a href="javascript:ajaxpage('friends.html', 'slider1');">Friends</a>
+						</div></td>
+						<td><div id="button">
+							<a href="javascript:ajaxpage('profile.html', 'slider1');">Profile</a>
+						</div></td></tr>
+					</table>
+				</div>
+			</div>
+			<div id="leftfooter">
+				<div id="newsfeed">
+					<a href="javascript:ajaxpage('newsfeed.html', 'slider1');">
+					<table><tr><td>
+						<img src="images/newsfeed.png" height="50"></td>
+						<td>News Feed</td>
+					</tr></table>
+					</a>
+				</div>
+				<div id="leftfootertabs">
+					<a href="javascript:ajaxpage('platform.html', 'slider1');">
+					<table><tr><td>
+						<img src="images/database.png" height="50"></td>
+						<td>Data Base</td>
+					</tr></table>
+					</a>
+				</div>
+				<div id="leftfootertabs">
+					<a href="javascript:ajaxpage('likesstats.html', 'slider1');">
+					<table><tr><td>
+						<img src="images/Likestats.png" height="50"></td>
+						<td>Likes Stats</td>
+					</tr></table>
+					</a>
+				</div>
+				<div id="leftfootertabs">
+					<a href="javascript:ajaxpage('tribe.html', 'slider1');">
+					<table><tr><td>
+						<img src="images/tribes.png" height="50"></td>
+						<td>Likes Stats</td>
+					</tr></table>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mainbar">
+		<div class="slider-wrap">
+			<div id="slider1" class="csw">
+				<div class="panelContainer">
+		
+					<div class="panel" title="Likes Diary">
+						<div class="wrapper">Content of Likes Diary here</div>
+					</div>
+					<div class="panel" title="Cheaps Diary">
+						<div class="wrapper">Content of Cheaps Diary here</div>
+					</div>		
+					<div class="panel" title="Calendar">
+						<div class="wrapper">Content of Calendar here</div>
+					</div>
+			
+				</div><!-- .panelContainer -->
+			</div><!-- #slider1 -->
+		</div><!-- .slider-wrap -->		
+	</div>
+</div>
+</body>
+</html>

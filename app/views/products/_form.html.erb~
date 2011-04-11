@@ -1,0 +1,32 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <% @groups = Subgroup.all %>
+ <% cou = @groups.count %>
+ <% arr = Array.new(cou) { Array.new(2) } %>
+ <% for n in 1..cou %>
+ <% arr[n-1][0] = @groups[n-1].subgroup %>
+ <% arr[n-1][1] = n %>
+ <% end %>
+ <% arr %>
+  <div class="field">
+    <%= f.label :productname %><br />
+    <%= f.text_field :productname %>
+  </div>
+  <div class="field">
+    <%= f.label :subgroup_id %><br />
+    <%= f.select( :subgroup_id , arr ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

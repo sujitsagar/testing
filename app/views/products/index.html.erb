@@ -1,0 +1,17 @@
+<% arr = Array.new %>
+<table >
+<tr>
+<% i = 0 %>
+
+
+<% @products.each do |product| %>
+    <td><%= product.productname %><br/>
+    <%= product.subgroup_id %><br/>
+    <%= product.user_id %></td>
+<% end %>
+</tr>
+</table>
+
+<br />
+
+<%= link_to 'New Product', new_product_path %>

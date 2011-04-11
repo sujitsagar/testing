@@ -1,0 +1,8 @@
+<div>
+
+<%= form_for(@user), :html => {:multipart => true} do |f| %>
+  <%= f.file_field :profilepic %>
+<% end %></div>
+<div class="actions">
+<%= f.submit "Upload" %>
+</div>

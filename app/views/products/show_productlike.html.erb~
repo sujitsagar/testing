@@ -1,0 +1,21 @@
+<table summary="Information about Productlikers">
+<tr>
+<td class="main">
+<h1><%= @title %></h1>
+<% unless @products.empty? %>
+<ul class="users">
+<%= render @products %>
+</ul>
+<%= will_paginate @products %>
+<% end %>
+</td>
+<td class="sidebar round">
+
+<% unless @products.empty? %>
+<% @products.each do |user| %>
+<%= link_to gravatar_for(user, :size => 50), user %>
+<% end %>
+<% end %>
+</td>
+</tr>
+</table>

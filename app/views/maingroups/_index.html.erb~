@@ -1,0 +1,120 @@
+
+<style type="text/css">
+#container2 td{
+	vertical-align: top;
+}
+#container2{
+	width: 98%; margin: 20px 0px 0px 10px;
+}
+</style>
+<div id="container2">
+<table>
+<tr width="100%">
+<td>
+
+<% for n in 0..5 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>
+</td><td>
+<% for n in 6..10 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table border=0><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>	
+</td>
+<td>
+<% for n in 11..15 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table border=0><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>	
+</td>
+<td>
+<% for n in 16..18 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table border=0><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>	
+</td>
+<td>
+<% for n in 18..23 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table border=0><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>	
+</td>
+<td>
+<% for n in 24..24 %>
+<% group = @maingroups[n] %>
+<table id="product" >
+	<tr><td>
+	<a href="<%= maingroup_path(group) %>">
+	<table border=0><tr><td>
+<%= image_tag( group.maingroupimage , :alt => "Group Image", :width =>20, :height => 20 ) %>
+</td>
+<td ><font size=2 color=#247885><b><%= group.maingroup %></b></font></td>
+	</tr></table>
+	</a>
+
+	</td></tr>
+</table>
+<% end %>	
+</td>
+
+</tr>
+	</table>
+</div>
+
+

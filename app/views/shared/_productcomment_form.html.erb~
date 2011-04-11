@@ -1,0 +1,11 @@
+<%= form_for @productcomment do |f| %>
+<%= render 'shared/error_messages', :object => f.object %>
+<div class="field">
+<%= f.text_area( :content, :size => "70x5" ,  :maxlength => 220,) %>
+</div>
+<input id="productcomment_product_id" name="productcomment[product_id]" type="hidden" value="<%= @product.id %>" />
+<div class="actions">
+<%= f.submit "Submit" %>
+</div>
+<% end %>
+

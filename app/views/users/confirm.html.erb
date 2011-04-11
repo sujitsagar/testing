@@ -1,0 +1,9 @@
+<%= form_for @user, :url => { :action => "confirm1" } do |f| %>
+<div class="field">
+<%= f.label :confirmation %>
+<%= f.text_field :confirmation %>
+</div>
+<div class="actions">
+<%= f.submit "Sign up" %>
+</div>
+<% end %>

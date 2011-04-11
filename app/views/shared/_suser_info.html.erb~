@@ -1,0 +1,5 @@
+<strong>Name</strong> <%= @user.name %><br />
+<%= pluralize(@user.microposts.count, "micropost") %>
+<% render 'shared/stats' %>
+<% render 'shared/pstats' %>
+<% render 'shared/dstats' %>

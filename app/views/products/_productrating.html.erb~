@@ -1,0 +1,51 @@
+
+
+
+
+
+
+<p>
+<% arr = merchantlike.where("merchant_id = ?", @merchant.id).order('id') %>
+  <% arr1 = arr + [] %>
+  <% rate1, rate2,  rate3,  rate4,  rate5= 0,0,0,0,0  %>
+  <% rc1, rc2,  rc3,  rc4,  rc5 = 1,1,1,1,1  %>
+  <% arr1.each do |pro| %>
+  <% if pro.rating1!=0 %><% rate1 += pro.rating1 %><% rc1+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating2!=0 %><% rate2 += pro.rating2 %><% rc2+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating3!=0 %><% rate3 += pro.rating3 %><% rc3+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating4!=0 %><% rate4 += pro.rating4 %><% rc4+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating5!=0 %><% rate5 += pro.rating5 %><% rc5+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% end %>
+  
+  <% count = arr.count.to_f %>
+  <table cellspacing="5" border="0" cellpadding="10" style="border: 1px solid blue"><tr><td>
+  <%= "Total Rating" %> : <br/>
+  <h4>Rating1 : ______________________ <%= ( rate1.to_f / rc1.to_f ).round(1) %><br/> 
+  Rating1 : ______________________ <%= ( rate2.to_f / rc2.to_f ).round(1) %><br/> 
+  Rating1 : ______________________ <%= ( rate3.to_f / rc3.to_f ).round(1) %><br/> 
+  Rating1 : ______________________ <%= ( rate4.to_f / rc4.to_f ).round(1) %><br/> 
+  Rating1 : ______________________ <%= ( rate5.to_f / rc5.to_f ).round(1) %><br/> 
+ </h4>
+  </td></tr></table>
+  <% urate1, urate2,  urate3,  urate4,  urate5= 0,0,0,0,0  %>
+  <% urc1, urc2,  urc3,  urc4,  urc5 = 1,1,1,1,1  %>
+  <% arr1.each do |pro| %>
+  <% if pro.rating1!=0 && current_user.following?(pro.user_id) %><% urate1 += pro.rating1 %><% urc1+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating2!=0 && current_user.following?(pro.user_id) %><% urate2 += pro.rating2 %><% urc2+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating3!=0 && current_user.following?(pro.user_id) %><% urate3 += pro.rating3 %><% urc3+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating4!=0 && current_user.following?(pro.user_id) %><% urate4 += pro.rating4 %><% urc4+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% if pro.rating5!=0 && current_user.following?(pro.user_id) %><% urate5 += pro.rating5 %><% urc5+= 1 %><% else %><% rc1+=0 %><% end %>
+  <% end %>
+  <br/>
+  
+  <% count = arr.count.to_f %>
+  <% "Rating by your following" %>
+  <% ( urate1.to_f / urc1.to_f ).round(1) %>
+  <% ( urate2.to_f / urc2.to_f ).round(1) %>
+  <% ( urate3.to_f / urc3.to_f ).round(1) %>
+  <% ( urate4.to_f / urc4.to_f ).round(1) %>
+  <% ( urate5.to_f / urc5.to_f ).round(1) %> 
+  
+
+
+</p>

@@ -1,0 +1,177 @@
+<style type="text/css">
+.background
+  {
+  width: 529px;
+  height: 352px;
+  background: url("<%= @merchant.merchantimage %>") no-repeat;
+  overflow: hidden;
+  border-top-left-radius: 8px 8px;
+  border-bottom-right-radius: 8px 8px;
+  }
+.transbox1
+  {
+  width: 312px;
+  height: 320px;
+  margin: 27px 0px 0px 15px;
+  border-top-left-radius: 8px 8px;
+  border-top-right-radius: 8px 8px;
+  background-color: #c8e8de;
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.8;
+  }
+.transbox2
+  {
+  width: 180px;
+  height: 100px;
+  padding: 20px 3px 0px 3px;
+  margin: 200px 0px 0px 0px;
+  border-bottom-right-radius: 8px 8px;
+  border-top-right-radius: 8px 8px;
+  background-color: black;
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.3;
+  }
+.transbox p
+  {
+  margin:30px 10px;
+  font-weight:bold;
+  color:#000000;
+ }
+#offerbox{
+	width: 117px;
+	height: 132px;
+	border: 1px solid dae9ea;
+	margin: 16px 5px 0px 5px;
+}
+#imagebox {
+	width: 18%;
+	height: 100%;
+	float: left
+}
+#imagebox img{
+	width: 80%;
+	height: 80%;
+	border: 1px solid #b3b3b3;
+}
+
+#imagebox img:hover{
+	width: 98%;
+	height: 98%;
+	border: 2px solid #b3b3b3;
+	margin: 1px 10px 0px 5px;
+}
+
+#bestcomment{ width: 30%; height: 90px; border-right: 1px solid #808080; margin: 20px 0px 0px 0px; padding: 40px 15px 0px 15px;}
+#imagecontainer{ width: 100%; height: 75px; margin: 20px 0px 0px 0px; }
+	
+</style>
+<div style="background-color:#f1f8f9">
+<div class="box1" style="width: 59%; min-height: 1050px; background-color:inherit;">
+	<div class="background">
+		<div class="box1 transbox1">
+			<div style="width: 100%; height:15%; text-align: center">
+				<font size=4 color=#247885><b>
+					<%= @merchant.merchantname %>
+				</b></font><br/>
+				<font size=3 color=#000000>
+					Kalayanpur, Kanpur 10/03/2010
+				</font>
+			</div>
+			<div style="width: 100%; height:20%; text-align: center">
+				//Rating tool
+			</div>
+			<div style="width: 100%; height:10%; border-top: 1px solid #808080;">
+				<table width="100%" height="100%"><tr><td width="33%" align="left"><font size=2 color=#247885>
+						View menu
+					</td></font>
+					<td width="33%" align="center"><font size=2 color=#247885>
+						Suggest friends
+					</font></td>
+					<td width="34%" align="right"><font size=2 color=#247885>
+						Send Enquiry
+					</font></td>
+				</tr></table>
+			</div>
+			<div style="width: 100%; height:55%; padding: 1% 0px 0px 2%;">
+				<font size=2 color=#000000>
+					<%= @merchant.merachantinfo %>
+				</font>
+			</div>
+		</div>
+		<div class="box1 transbox2">
+			<font size=3 color=#FFF>
+				<%= @merchant.tribecomment %>
+			</font><br/>
+		</div>
+	</div>
+	<div id="imagecontainer">
+		<div style="width: 100%; height: 100%;">
+			<div id="imagebox"><img src="images/imageslider.png" width="20%" height="20%"></div>
+			<div id="imagebox"><img src="images/imageslider.png"></div>
+			<div id="imagebox"><img src="images/imageslider.png"></div>
+                        <div id="imagebox"><img src="images/imageslider.png"></div>
+                        <div id="imagebox"><img src="images/imageslider.png"></div>
+		</div>
+	</div>
+	<div style="width: 98%; height: 170px; margin: 20px 0px 0px 5px; background-color: #dae9ea;">
+		<div  class="box1" id="bestcomment">
+			<font size=3 color=#808080>
+				"Hookah Kanpur is the best place! :) i'm loving it."
+			</font><br/><font size=2 color=#247885><div style="height: 10px; text-align: right;">
+				-Harsha Karumanchi
+			</div></font>	
+		</div>
+		<div  class="box1" id="ratingboxbig">
+			//Ratting Tool
+		</div>
+	</div><br/></br>
+	<div style="width: 100%; height: 2px;"><hr noshade="noshade" style="color: #808080; height: 1px;"/></div>
+	<div style="width: 80%; min-height: 200px; margin: 20px 0px 0px 5px;">
+		<table class="profile" summary="Profile information" border=0 >
+			<tr><td class="main">
+				
+				<%= render 'shared/merchantcomment_form' %>
+				<% unless @merchantcomments.empty? %>
+				<table class="microposts" style="text-align:left;"><tr><td>
+					<%= render @merchantcomments %>
+				</td></tr></table>
+				<% end %>
+			</td></tr>
+		</table>
+	</div>
+</div>
+<div class="box1" style="width: 35%; height:inherit; margin-left:2%;">
+	<div style="width: 100%px; height: 23px; margin: 0px 0px 30px 0px;">
+		<%= render 'merchants/mertchantlike_form' %>
+	</div>
+	<div style="width: 100%; height: 150px;">
+		<div id="infoheader"><font size=2 color=#247885><b>Contact</b></font></div>
+		<div style="width: 100%; height: 128px; border: 1px solid #dae9ea;">
+			<font size=2 color=#4d4d4d>
+      				<%= @merchant.meraddress %><br/>
+      				<%= @merchant.merchantphone %>
+			</font>
+		</div>
+	</div>
+	<div style="width: 100%; height: 200px;">
+		<div id="infoheader"><font size=2 color=#247885><b>Our Speciality</b></font></div>
+		<div style="width: 272px; height: 200px;">
+			<div  class="box1" id="offerbox"><%= image_tag( @merchant.merspecimage , :alt => "Offer Image", :size => "117x120" ) %><br/><%= @merchant.merspectext %></div>
+    
+			<div  class="box1" id="offerbox"><%= image_tag( @merchant.merspecimage , :alt => "Offer Image", :size => "117x120" ) %><br/><%= @merchant.merspectext %></div>
+		</div>
+	</div>
+	<div style="width: 100%; height: 200px;">
+		<div id="infoheader"><font size=2 color=#247885><b>Our offers</b></font></div>
+		<div style="width: 98%; height: 200px;">
+			<div  class="box1" id="offerbox"><%= image_tag( @merchant.merofferimage , :alt => "Offer Image", :size => "117x120" ) %><br/><%= @merchant.meroffertext %></div>
+			<div  class="box1" id="offerbox"><%= image_tag( @merchant.merofferimage , :alt => "Offer Image", :size => "117x120" ) %><br/><%= @merchant.meroffertext %></div>
+		</div>
+	</div>
+</div>
+
+</div>

@@ -1,0 +1,38 @@
+
+<br/><br/><br/>
+
+<br/>
+<% len = @products.length %>
+<% nlen = len/3 + 1 %>
+<table cellspacing="58" border="0" cellpadding="30" align="center">
+<% for n in 1..nlen %>
+<tr><td>
+<% group = @products[3*n-3] %>
+<% if !group.nil? %>
+<%= image_tag( group.productimage , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
+<br/>
+
+<b style='font-size:16px;'><%= link_to group.productname, group %></b><br/>
+<b style='font-size:14px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @products[3*n-2] %>
+<% if !group.nil? %>
+<%= image_tag( group.productimage , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
+<br/>
+
+<b style='font-size:16px;'><%= link_to group.productname, group %></b><br/>
+<b style='font-size:14px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @products[3*n-1] %>
+<% if !group.nil? %>
+<%= image_tag( group.productimage , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
+<br/>
+
+<b style='font-size:16px;'><%= link_to group.productname, group %></b><br/>
+<b style='font-size:14px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b>
+<% end %>
+</td></tr>
+<% end %>
+</table>

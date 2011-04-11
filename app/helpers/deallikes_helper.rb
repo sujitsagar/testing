@@ -1,0 +1,2 @@
+module DeallikesHelper
+end

@@ -1,0 +1,59 @@
+
+<% @nodeals = @alldeals - @deals %>
+<% @deals = @nodeals %>
+
+
+<h3> Not User Deals ( <%= @deals.length %> ) </h3>
+<br/>
+<% len = @deals.length %>
+<% nlen = len/3 + 1 %>
+<table cellspacing="4" border="0" cellpadding="10" align="center">
+<% for n in 1..nlen %>
+<tr><td>
+<% group = @deals[3*n-3] %>
+<% if !group.nil? %>
+<%= image_tag( group.image , :alt => "Group Image", :border => 1 ,:width =>70, :height => 90 ) %>
+<br/>
+
+<b style='font-size:10px;'><%= link_to group.name, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.attendances.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @deals[3*n-2] %>
+<% if !group.nil? %>
+<%= image_tag( group.image , :alt => "Group Image", :border => 1 ,:width =>70, :height => 90 ) %>
+<br/>
+
+<b style='font-size:10px;'><%= link_to group.name, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.attendances.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @deals[3*n-1] %>
+<% if !group.nil? %>
+<%= image_tag( group.image , :alt => "Group Image", :border => 1 ,:width =>70, :height => 90 ) %>
+<br/>
+
+<b style='font-size:10px;'><%= link_to group.name, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.attendances.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @deals[3*n-1] %>
+<% if !group.nil? %>
+<%= image_tag( group.image , :alt => "Group Image", :border => 1 ,:width =>70, :height => 90 ) %>
+<br/>
+
+<b style='font-size:10px;'><%= link_to group.name, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.attendances.count, " Liker" ) %></b>
+<% end %>
+</td><td>
+<% group = @deals[3*n-1] %>
+<% if !group.nil? %>
+<%= image_tag( group.image , :alt => "Group Image", :border => 1 ,:width =>70, :height => 90 ) %>
+<br/>
+
+<b style='font-size:10px;'><%= link_to group.name, group %></b><br/>
+<b style='font-size:10px;'><%= pluralize( group.attendances.count, " Liker" ) %></b>
+<% end %>
+</td></tr>
+<% end %>
+</table>

@@ -1,0 +1,62 @@
+<%= form_for(@merchant) do |f| %>
+  <% if @merchant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
+
+      <ul>
+      <% @merchant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :merchantname %><br />
+    <%= f.text_field :merchantname %>
+  </div>
+  <div class="field">
+    <%= f.label :merchantimage %><br />
+    <%= f.text_field :merchantimage %>
+  </div>
+  <div class="field">
+    <%= f.label :menulink %><br />
+    <%= f.text_field :menulink %>
+  </div>
+  <div class="field">
+    <%= f.label :tribecomment %><br />
+    <%= f.text_area :tribecomment %>
+  </div>
+  <div class="field">
+    <%= f.label :merachantinfo %><br />
+    <%= f.text_area :merachantinfo %>
+  </div>
+  <div class="field">
+    <%= f.label :merspectext %><br />
+    <%= f.text_field :merspectext %>
+  </div>
+  <div class="field">
+    <%= f.label :merspecimage %><br />
+    <%= f.text_field :merspecimage %>
+  </div>
+  <div class="field">
+    <%= f.label :meroffertext %><br />
+    <%= f.text_field :meroffertext %>
+  </div>
+  <div class="field">
+    <%= f.label :merofferimage %><br />
+    <%= f.text_field :merofferimage %>
+  </div>
+  <div class="field">
+    <%= f.label :meraddress %><br />
+    <%= f.text_area :meraddress %>
+  </div>
+  <div class="field">
+    <%= f.label :merchantphone %><br />
+    <%= f.text_area :merchantphone %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

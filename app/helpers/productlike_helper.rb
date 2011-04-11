@@ -1,0 +1,2 @@
+module ProductlikeHelper
+end
