@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         @title = "Sign in"
         render 'new'
     else if !user.active?
-        flash.now[:error] = "Your Account is not active, Please check your mail to active your account"
+        flash.now[:error] = "Your Account is not active"
         @title = "Sign in"
         render 'new'
     else     

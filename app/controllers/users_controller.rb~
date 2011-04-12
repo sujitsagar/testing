@@ -32,7 +32,7 @@ class UsersController < ApplicationController
         redirect_to root_path
      else
         @title = "Sign up"
-        render 'new'#,:layout => 'signuplogin'
+        render 'new',:layout => 'signuplogin'
      end
      
   end

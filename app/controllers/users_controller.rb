@@ -25,7 +25,7 @@ class UsersController < ApplicationController
      @user.confirmation = String.random_alphanumeric(8)
      @user.active = 0
      if @user.save
-	UserMailer.welcome_email(@user).deliver
+	#UserMailer.welcome_email(@user).deliver
         #sign_in @user
         #redirect_to @user #enable it to direct sign in after sign up
         flash[:success] = "Please check your mail to activate your account"

@@ -14,16 +14,16 @@ class SessionsController < ApplicationController
         flash.now[:error] = "Invalid email/password combination."
         @title = "Sign in"
         render 'new'
-    else if !user.active?
-        flash.now[:error] = "Your Account is not active"
-        @title = "Sign in"
-        render 'new'
+    #else if !user.active?
+    #    flash.now[:error] = "Your Account is not active"
+    #    @title = "Sign in"
+    #    render 'new'
     else     
         # Sign the user in and redirect to the user's show page.
         sign_in user
         redirect_to cheapsdiary_path
     end
-    end
+    #end
   end
   
   def destroy
