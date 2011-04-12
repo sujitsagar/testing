@@ -21,15 +21,14 @@ class UsersController < ApplicationController
   end
 
   def create
-     
      @user = User.new(params[:user])
-     @user.confirmation = "sujit"
+     @user.confirmation = String.random_alphanumeric(8)
      @user.active = 0
      if @user.save
-        UserMailer.welcome_email(@user).deliver
+	UserMailer.welcome_email(@user).deliver
         #sign_in @user
         #redirect_to @user #enable it to direct sign in after sign up
-        flash[:success] = "Registration successful, Please check your mail to activate your account"
+        flash[:success] = "Please check your mail to activate your account"
         redirect_to root_path
      else
         @title = "Sign up"
@@ -154,5 +153,9 @@ class UsersController < ApplicationController
        @user = User.find(params[:id])
        redirect_to(users_path) unless current_user.admin?
      end  
-    
+    def String.random_alphanumeric(size=16)
+  	s = ""
+  	size.times { s << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
+  	s
+    end
 end

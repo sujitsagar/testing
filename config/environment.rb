@@ -12,6 +12,7 @@ ActionMailer::Base.smtp_settings = {
     :port => "587",
     :domain => "likesdiary.com",
     :authentication => :plain,
-    :user_name => "sujitsagar.iitk",
-    :password => "ramanujan"
-  }
+    :user_name => "likesdiary2011",
+    :password => "sujitsagar"
+ }
+ActionMailer::Base.raise_delivery_errors = true

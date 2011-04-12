@@ -1,7 +1,19 @@
 <!DOCTYPE webprojectsession>
 <webprojectsession>
   <session usePreviewPrefix="0" previewPrefix="" >
-    <itemcursorpositions/>
+    <itemcursorpositions>
+      <item line="39" column="5" url="app/controllers/users_controller.rb" />
+      <item line="22" column="14" url="app/helpers/sessions_helper.rb" />
+      <item line="0" column="0" url="app/helpers/application_helper.rb" />
+      <item line="0" column="0" url="app/helpers/users_helper.rb" />
+      <item line="0" column="0" url="app/models/user.rb" />
+      <item line="0" column="0" url="config/environment.rb" />
+      <item line="9" column="13" url="app/mailers/user_mailer.rb" />
+      <item line="5" column="48" url="app/mailers/confirm_mailer.rb" />
+      <item line="5" column="17" url="app/views/layouts/likesdiary.html.erb" />
+      <item line="12" column="0" url="app/views/layouts/application.html.erb" />
+      <item line="0" column="0" url="app/views/layouts/signuplogin.html.erb" />
+    </itemcursorpositions>
     <treestatus>
       <openfolder url="lib" />
       <openfolder url="lib/tasks" />
@@ -20,6 +32,7 @@
       <openfolder url="app/views/layouts" />
       <openfolder url="app/models" />
       <openfolder url="app/mailers" />
+      <openfolder url="app/helpers" />
       <openfolder url="app/controllers" />
     </treestatus>
   </session>
