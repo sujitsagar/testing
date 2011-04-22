@@ -47,8 +47,8 @@ class User < ActiveRecord::Base
     has_many :attendances, :dependent => :destroy
     has_many :deals, :through => :attendances
 
-    has_attached_file :photo,
-     :styles => { :thumb=> "100x100#", :small  => "400x400>" }
+    #has_attached_file :photo,
+    # :styles => { :thumb=> "100x100#", :small  => "400x400>" }
      
     
     email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -110,7 +110,7 @@ class User < ActiveRecord::Base
    
     private
     def encrypt_password
-           return if password.nil?
+         return if password.nil?
          self.salt = make_salt if new_record?
          self.encrypted_password = encrypt(password)
     end

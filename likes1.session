@@ -1,4 +1,11 @@
 <!DOCTYPE webprojectsession>
 <webprojectsession>
-  <session usePreviewPrefix="0" previewPrefix="" />
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions>
+      <item line="35" column="27" url="app/controllers/subgroups_controller.rb" />
+      <item line="39" column="34" url="app/views/users/new.html.erb" />
+      <item line="0" column="0" url="app/views/subgroups/new.html.erb" />
+      <item line="0" column="0" url="app/controllers/users_controller.rb" />
+    </itemcursorpositions>
+  </session>
 </webprojectsession>

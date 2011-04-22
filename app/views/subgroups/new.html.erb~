@@ -18,7 +18,7 @@
     Type </td><td>
     <%= f.text_field :cate1 %></TD></TR>
   <TR><TD>
-    Brand </td><td>
+    <%= f.label :cate2 %></td><td>
     <%= f.text_field :cate2 %></TD></TR>
   </table> 
 <div class="actions">

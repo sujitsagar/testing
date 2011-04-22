@@ -33,7 +33,7 @@ class SubgroupsController < ApplicationController
     @subgroup = Subgroup.new(params[:subgroup])
 
      if @subgroup.save
-         redirect_to (:back)
+         redirect_to @subgroup
          flash[:success] = "Subgroup was successfully created."
      else
          render :action => "new" 

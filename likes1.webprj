@@ -2,8 +2,8 @@
 <webproject>
   <project type="Local" name="likes1" encoding="utf8" >
     <upload/>
-    <author></author>
-    <email></email>
+    <author/>
+    <email/>
     <defaultDTD>-//W3C//DTD HTML 4.01 Transitional//EN</defaultDTD>
     <item url="app/" uploadstatus="1" />
     <item url="app/controllers/" uploadstatus="1" />
@@ -663,7 +663,6 @@
     <item url="test/test_helper.rb" uploadstatus="1" />
     <item url="tmp/" uploadstatus="1" />
     <item url="tmp/pids/" uploadstatus="1" />
-    <item url="tmp/pids/server.pid" uploadstatus="1" />
     <item url="vendor/" uploadstatus="1" />
     <item url="vendor/plugins/" uploadstatus="1" />
     <item url="vendor/plugins/action_mailer_optional_tls/" uploadstatus="1" />
@@ -675,11 +674,6 @@
     <item url="vendor/plugins/action_mailer_optional_tls/README" uploadstatus="1" />
     <item url="vendor/plugins/action_mailer_optional_tls/Rakefile" uploadstatus="1" />
     <item url="vendor/plugins/action_mailer_optional_tls/init.rb" uploadstatus="1" />
-    <item url="vendor/plugins/gmail_smtp/" uploadstatus="1" />
-    <item url="vendor/plugins/gmail_smtp/lib/" uploadstatus="1" />
-    <item url="vendor/plugins/gmail_smtp/lib/actionmailer_gmail.rb" uploadstatus="1" />
-    <item url="vendor/plugins/gmail_smtp/lib/smtp_tls.rb" uploadstatus="1" />
-    <item url="vendor/plugins/gmail_smtp/init.rb" uploadstatus="1" />
     <item url="vendor/plugins/paperclip/" uploadstatus="1" />
     <item url="vendor/plugins/paperclip/cucumber/" uploadstatus="1" />
     <item url="vendor/plugins/paperclip/cucumber/paperclip_steps.rb" uploadstatus="1" />
@@ -791,5 +785,297 @@
     <item url="likes.session" uploadstatus="1" />
     <item url="likes.webprj" uploadstatus="1" />
     <item url="" uploadstatus="1" />
+    <templates>templates/</templates>
+    <toolbars>toolbars/</toolbars>
+    <annotations/>
+    <item url=".bundle/" uploadstatus="1" />
+    <item url=".bundle/config" uploadstatus="1" />
+    <item url=".git/" uploadstatus="1" />
+    <item url=".git/branches/" uploadstatus="1" />
+    <item url=".git/hooks/" uploadstatus="1" />
+    <item url=".git/hooks/applypatch-msg.sample" uploadstatus="1" />
+    <item url=".git/hooks/commit-msg.sample" uploadstatus="1" />
+    <item url=".git/hooks/post-commit.sample" uploadstatus="1" />
+    <item url=".git/hooks/post-receive.sample" uploadstatus="1" />
+    <item url=".git/hooks/post-update.sample" uploadstatus="1" />
+    <item url=".git/hooks/pre-applypatch.sample" uploadstatus="1" />
+    <item url=".git/hooks/pre-commit.sample" uploadstatus="1" />
+    <item url=".git/hooks/pre-rebase.sample" uploadstatus="1" />
+    <item url=".git/hooks/prepare-commit-msg.sample" uploadstatus="1" />
+    <item url=".git/hooks/update.sample" uploadstatus="1" />
+    <item url=".git/info/" uploadstatus="1" />
+    <item url=".git/info/exclude" uploadstatus="1" />
+    <item url=".git/logs/" uploadstatus="1" />
+    <item url=".git/logs/refs/" uploadstatus="1" />
+    <item url=".git/logs/refs/heads/" uploadstatus="1" />
+    <item url=".git/logs/refs/heads/master" uploadstatus="1" />
+    <item url=".git/logs/refs/remotes/" uploadstatus="1" />
+    <item url=".git/logs/refs/remotes/heroku/" uploadstatus="1" />
+    <item url=".git/logs/refs/remotes/heroku/master" uploadstatus="1" />
+    <item url=".git/logs/HEAD" uploadstatus="1" />
+    <item url=".git/objects/" uploadstatus="1" />
+    <item url=".git/objects/1f/" uploadstatus="1" />
+    <item url=".git/objects/1f/ebf48184e1a35d239905002b745316f714b92d" uploadstatus="1" />
+    <item url=".git/objects/49/" uploadstatus="1" />
+    <item url=".git/objects/49/5247f20f99e1b18ee3d9b7736ac0df9de4ba0b" uploadstatus="1" />
+    <item url=".git/objects/59/" uploadstatus="1" />
+    <item url=".git/objects/59/93123543bea050532f9d6a60b83a5d789133ef" uploadstatus="1" />
+    <item url=".git/objects/6b/" uploadstatus="1" />
+    <item url=".git/objects/6b/bd89d72759848b339ec6a9bc034c033ad33f44" uploadstatus="1" />
+    <item url=".git/objects/80/" uploadstatus="1" />
+    <item url=".git/objects/80/e04bb68c77dd32504ed823dc46b8d71a9200a6" uploadstatus="1" />
+    <item url=".git/objects/8a/" uploadstatus="1" />
+    <item url=".git/objects/8a/471e5528fd0c2544bfd135bbc612d5f1d59ab8" uploadstatus="1" />
+    <item url=".git/objects/97/" uploadstatus="1" />
+    <item url=".git/objects/97/79d83c9cedb10be37055ed64cea2477cb56f88" uploadstatus="1" />
+    <item url=".git/objects/9e/" uploadstatus="1" />
+    <item url=".git/objects/9e/79ac4c4c1f6acdc6a957b8d312f3146b96503b" uploadstatus="1" />
+    <item url=".git/objects/a5/" uploadstatus="1" />
+    <item url=".git/objects/a5/184233b78d8dcf5a8a4459eaef25f8f9a6cd5e" uploadstatus="1" />
+    <item url=".git/objects/ad/" uploadstatus="1" />
+    <item url=".git/objects/ad/231e8e0fab5818fd963864873d8c4ec71d6bea" uploadstatus="1" />
+    <item url=".git/objects/c4/" uploadstatus="1" />
+    <item url=".git/objects/c4/371a01d69423ad84ab32d9770615d4648a4567" uploadstatus="1" />
+    <item url=".git/objects/c5/" uploadstatus="1" />
+    <item url=".git/objects/c5/e7499240b3b4daee1ca7c0fdae249e0a0e0bd5" uploadstatus="1" />
+    <item url=".git/objects/f3/" uploadstatus="1" />
+    <item url=".git/objects/f3/f45d5e1e906af7192e10953178af99a9f117b9" uploadstatus="1" />
+    <item url=".git/objects/info/" uploadstatus="1" />
+    <item url=".git/objects/pack/" uploadstatus="1" />
+    <item url=".git/objects/pack/pack-5977cd003f3f153a50066d67e2610f9b1dde5c03.idx" uploadstatus="1" />
+    <item url=".git/objects/pack/pack-5977cd003f3f153a50066d67e2610f9b1dde5c03.pack" uploadstatus="1" />
+    <item url=".git/refs/" uploadstatus="1" />
+    <item url=".git/refs/heads/" uploadstatus="1" />
+    <item url=".git/refs/heads/master" uploadstatus="1" />
+    <item url=".git/refs/remotes/" uploadstatus="1" />
+    <item url=".git/refs/remotes/heroku/" uploadstatus="1" />
+    <item url=".git/refs/remotes/heroku/master" uploadstatus="1" />
+    <item url=".git/refs/remotes/origin/" uploadstatus="1" />
+    <item url=".git/refs/remotes/origin/HEAD" uploadstatus="1" />
+    <item url=".git/refs/tags/" uploadstatus="1" />
+    <item url=".git/COMMIT_EDITMSG" uploadstatus="1" />
+    <item url=".git/HEAD" uploadstatus="1" />
+    <item url=".git/config" uploadstatus="1" />
+    <item url=".git/description" uploadstatus="1" />
+    <item url=".git/index" uploadstatus="1" />
+    <item url=".git/packed-refs" uploadstatus="1" />
+    <item url="app/controllers/deals_controller.rb~" uploadstatus="1" />
+    <item url="app/controllers/productlikes_controller.rb~" uploadstatus="1" />
+    <item url="app/controllers/sessions_controller.rb~" uploadstatus="1" />
+    <item url="app/controllers/users_controller.rb~" uploadstatus="1" />
+    <item url="app/helpers/application_helper.rb~" uploadstatus="1" />
+    <item url="app/helpers/users_helper.rb~" uploadstatus="1" />
+    <item url="app/mailers/confirm_mailer.rb~" uploadstatus="1" />
+    <item url="app/mailers/user_mailer.rb~" uploadstatus="1" />
+    <item url="app/models/product.rb~" uploadstatus="1" />
+    <item url="app/models/user.rb~" uploadstatus="1" />
+    <item url="app/views/deals/_dealattend.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/_dealattend_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/_deallike_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/_dealnotattend.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/_dealunlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/index.html.erb~" uploadstatus="1" />
+    <item url="app/views/deals/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/_header1.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/_header2.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/_headertabs.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/_stylesheets.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/_userinfo.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/cheapsdiary.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/likesdiary.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/profile.html.erb~" uploadstatus="1" />
+    <item url="app/views/layouts/signuplogin.html.erb~" uploadstatus="1" />
+    <item url="app/views/maingroups/_index.html.erb~" uploadstatus="1" />
+    <item url="app/views/maingroups/index.html.erb~" uploadstatus="1" />
+    <item url="app/views/maingroups/new.html.erb~" uploadstatus="1" />
+    <item url="app/views/maingroups/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchantcomments/_merchantcomment.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/_merchantlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/_merchantrating.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/_merchantunlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/_merhantlike_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/index.html.erb~" uploadstatus="1" />
+    <item url="app/views/merchants/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/microposts/_micropost.html.erb~" uploadstatus="1" />
+    <item url="app/views/pages/_showproducts.html.erb~" uploadstatus="1" />
+    <item url="app/views/pages/_showproducts1.html.erb~" uploadstatus="1" />
+    <item url="app/views/pages/home.html.erb~" uploadstatus="1" />
+    <item url="app/views/pages/likestat.html.erb~" uploadstatus="1" />
+    <item url="app/views/productcomments/_productcomment.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_product.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_productlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_productlike_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_productrating.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_productunlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/_pstats.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/products/show_productlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/sessions/login.html.erb~" uploadstatus="1" />
+    <item url="app/views/sessions/new.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_error_messages.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_feed.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_feed_item.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_merchantcomment_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_productcomment_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_pstats.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_stats.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_suser_info.html.erb~" uploadstatus="1" />
+    <item url="app/views/shared/_user_info.html.erb~" uploadstatus="1" />
+    <item url="app/views/subgroups/_form.html.erb~" uploadstatus="1" />
+    <item url="app/views/subgroups/_show.html.erb~" uploadstatus="1" />
+    <item url="app/views/subgroups/index.html.erb~" uploadstatus="1" />
+    <item url="app/views/subgroups/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/user_mailer/welcome_email.html.erb~" uploadstatus="1" />
+    <item url="app/views/user_mailer/welcome_email.text.erb~" uploadstatus="1" />
+    <item url="app/views/users/_follow.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/_unfollow.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/confirm.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/edit.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/index.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/new.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/show.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/show_follow.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/show_userdealattend.html.erb~" uploadstatus="1" />
+    <item url="app/views/users/show_usermerchantlike.html.erb~" uploadstatus="1" />
+    <item url="app/views/usersignup/new.html.erb~" uploadstatus="1" />
+    <item url="config/environment.rb~" uploadstatus="1" />
+    <item url="config/routes.rb~" uploadstatus="1" />
+    <item url="db/migrate/20110404191225_add_details_to_users.rb~" uploadstatus="1" />
+    <item url="lib/tasks/sample_data.rake~" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/css/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/css/._.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/css/._slidertab.css" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/css/._style.css" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._Likestats.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._Newsfeed.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._button.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._button_bg.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._button_bg2.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._button_selected.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._database.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._friends.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._header.jpg" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._logo.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._logosmall.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform1img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform2img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform3img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform4img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform5img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform6img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform7img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform8img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._platform9img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._tab_bg.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._tribes.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._welcome_header.jpg" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/images/._welcome_img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._ajax.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._coda-slider.1.1.1.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._jquery-1.2.1.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._jquery-easing-compatibility.1.2.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._jquery-easing.1.2.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/__MACOSX/js/._jquery-easing.1.2.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/css/.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/Archive (2)/images/.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/css/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/css/._.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/css/._slidertab.css" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/css/._style.css" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._Likestats.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._Newsfeed.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._button.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._button_bg.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._button_selected.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._database.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._friends.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._header.jpg" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._logo.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._logosmall.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._platform1img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._platform2img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._platform3img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._tab_bg.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._tribes.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._unknow.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._welcome_header.jpg" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/images/._welcome_img.png" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._ajax.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._coda-slider.1.1.1.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._jquery-1.2.1.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._jquery-easing-compatibility.1.2.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._jquery-easing.1.2.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/__MACOSX/js/._jquery-easing.1.2.pack.js" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/css/.DS_Store" uploadstatus="1" />
+    <item url="public/OLD_TEMPS/archive/images/.DS_Store" uploadstatus="1" />
+    <item url="public/css/.DS_Store" uploadstatus="1" />
+    <item url="public/images/.DS_Store" uploadstatus="1" />
+    <item url="public/javascripts/jquery.countdown.pack.js" uploadstatus="1" />
+    <item url="public/javascripts/jquery.min.js" uploadstatus="1" />
+    <item url="public/stylesheets/.gitkeep" uploadstatus="1" />
+    <item url="public/stylesheets/countdownstyle.css" uploadstatus="1" />
+    <item url="public/stylesheets/custom.css~" uploadstatus="1" />
+    <item url="public/stylesheets/jquery.countdown.css" uploadstatus="1" />
+    <item url="public/stylesheets/scaffold.css~" uploadstatus="1" />
+    <item url="public/stylesheets/style.css~" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/css/" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/css/._.DS_Store" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/css/._style.css" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._.DS_Store" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._Likestats.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._Newsfeed.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._button.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._button_bg.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._button_selected.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._database.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._friends.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._header.jpg" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._leftfootertabs.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._leftfootertabs_selected.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._logo.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._logosmall.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform1img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform2img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform3img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform4img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform5img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform6img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform7img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform8img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._platform9img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._search.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._tab.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._tribes.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._welcome_header.jpg" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/images/._welcome_img.png" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/._css" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/._images" uploadstatus="1" />
+    <item url="public/temp1/__MACOSX/._newsfeed.html" uploadstatus="1" />
+    <item url="public/temp1/css/.DS_Store" uploadstatus="1" />
+    <item url="public/temp1/css/style.css~" uploadstatus="1" />
+    <item url="public/temp1/images/.DS_Store" uploadstatus="1" />
+    <item url="templates/" uploadstatus="1" />
+    <item url="tmp/cache/" uploadstatus="1" />
+    <item url="tmp/sessions/" uploadstatus="1" />
+    <item url="tmp/sockets/" uploadstatus="1" />
+    <item url="toolbars/" uploadstatus="1" />
+    <item url="vendor/plugins/paperclip/test/.gitignore" uploadstatus="1" />
+    <item url="vendor/plugins/.gitkeep" uploadstatus="1" />
+    <item url=".rspec" uploadstatus="1" />
+    <item url="likes1.session" uploadstatus="1" />
+    <item url="likes1.webprj" uploadstatus="1" />
   </project>
 </webproject>

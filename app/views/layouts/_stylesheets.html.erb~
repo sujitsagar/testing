@@ -1,5 +1,3 @@
-<%=javascript_include_tag :defaults %>
-
 
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/ie.css">

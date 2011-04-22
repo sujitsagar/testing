@@ -1,0 +1,37 @@
+<script type="text/javascript">
+var subgroups = new Array();
+<% for subgroup in @subgroups -%>
+  subgroups.push(new Array(<%= subgroup.maingroup_id %>, '<%=h subgroup.subgroup %>', <%= subgroup.id %>));
+<% end -%>
+
+function maingroupSelected() {
+  maingroup_id = $('person_maingroup_id').getValue();
+  options = $('person_subgroup_id').options;
+  options.length = 1;
+  subgroups.each(function(subgroup) {
+    if (subgroup[0] == maingroup_id) {
+      options[options.length] = new Option(subgroup[1], subgroup[2]);
+    }
+  });
+  if (options.length == 1) {
+    $('subgroup_field').hide();
+  } else {
+    $('subgroup_field').show();
+  }
+}
+
+document.observe('dom:loaded', function() {
+  maingroupSelected();
+  $('person_maingroup_id').observe('change', maingroupSelected);
+});
+</script>
+<% form_for @subgroup do |f| %>
+<p>
+  <label for="person_maingroup_id">Maingroup:</label>
+  <%= f.collection_select :id, Maingroup.all, :id, :maingroup, :prompt => "Select a Maingroup" %>
+</p>
+<p id="subgroup_field">
+  <label for="person_subgroup_id">Subgroup:</label>
+  <%= f.collection_select :id, Subgroup.all, :id, :subgroup, :prompt => "Select a Subgroup" %>
+</p>
+<% end %>

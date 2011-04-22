@@ -1,5 +1,8 @@
 <h1>Edit user</h1>
-<%= form_for(@user) do |f| %>
+<% `which convert` %><br/>
+<% `echo $PATH` %>
+
+<%= form_for @user , :html => { :multipart => true } do |f| %>
 <%= render 'shared/error_messages', :object => f.object %>
 <div class="field">
 <%= f.label :name %><br />
