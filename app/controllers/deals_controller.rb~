@@ -46,8 +46,8 @@ class DealsController < ApplicationController
     @deal.aboutdeal  = params[:deal][:aboutdeal]
     @deal.info2  = params[:deal][:info2]
     @deal.address  = params[:deal][:address]
-    @deal.startat = DateTime.civil(params[:user]["startat(1i)"].to_i,params[:user]["startat(2i)"].to_i,params[:user]["startat(3i)"].to_i,params[:user]["startat(4i)"].to_i,params[:user]["startat(5i)"].to_i)
-    @deal.endat = DateTime.civil(params[:user]["endat(1i)"].to_i,params[:user]["endat(2i)"].to_i,params[:user]["endat(3i)"].to_i,params[:user]["endat(4i)"].to_i,params[:user]["endat(5i)"].to_i)
+    @deal.startat = DateTime.civil(params[:deal]["startat(1i)"].to_i,params[:deal]["startat(2i)"].to_i,params[:deal]["startat(3i)"].to_i,params[:deal]["startat(4i)"].to_i,params[:deal]["startat(5i)"].to_i)
+    @deal.endat = DateTime.civil(params[:deal]["endat(1i)"].to_i,params[:deal]["endat(2i)"].to_i,params[:deal]["endat(3i)"].to_i,params[:deal]["endat(4i)"].to_i,params[:deal]["endat(5i)"].to_i)
    if @deal.save
        redirect_to @deal
        flash[:success] = 'Deal was successfully created.'

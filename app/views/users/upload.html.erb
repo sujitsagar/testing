@@ -6,3 +6,11 @@
 <div class="actions">
 <%= f.submit "Upload" %>
 </div>
+
+<% @post.each  do |image|  %>
+  <img src="/images/users/<%= image["filename"] %>"/>
+  <br/>
+  <%= image["width"] %> x <%= image["height"] %>
+  <br/>
+
+<% end %>

@@ -53,7 +53,7 @@ Final::Application.routes.draw do
     get :following, :followers, :products, :deals, :merchants, :confirm, :confirm1
    end
   end
-
+  resources :upload
   resources :sessions, :only => [:new, :create, :destroy]
   resources :microposts, :only => [:create, :destroy]
   resources :relationships, :only => [:create, :destroy]

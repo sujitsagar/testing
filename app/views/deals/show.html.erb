@@ -54,7 +54,7 @@ p{
 	width: 404px;
 	height: 250px;
 	border: 1px solid #b3b3b3;
-	background: url("/images/current_deal.png") no-repeat;
+	background: url("<%= @deal.photo.url %>") no-repeat;
 }
 .transbox
   {
@@ -136,6 +136,8 @@ p{
 				</div>
 				<div  class="box1">
 					<div style="width: 404px; height: 15px; text-align: right;">
+		<font size=2 color=#247885><b><%= link_to "edit",edit_deal_path(@deal) %></b></font>
+						&nbsp;&nbsp;&nbsp;&nbsp;
 						<font size=2 color=#247885><b>Total money saved:</b></font>
 						<font size=2 color=#b3b3b3><b>Rs <%= @saved %></b></font>
 					</div>

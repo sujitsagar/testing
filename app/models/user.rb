@@ -65,6 +65,16 @@ class User < ActiveRecord::Base
                          :confirmation => true
     #                     :length => { :within => 6..40 }
                          
+
+    has_attached_file :photo, :styles => { :normal => "100x100#", :small => ["150x170#", :jpg] },
+			      :default_style => :small,
+			      :path => ":rails_root/public/system/users/:attachment/:id/:style/:basename.:extension",
+			      :url => "/system/users/:attachment/:id/:style/:basename.:extension",
+ 		       	      :default_url => "/system/users/:attachment/missing_:style.png"
+			      #:whiny_thumbnails => true
+
+    #validates_attachment_content_type :avatar, :content_type => 'image/jpeg'
+
     before_save :encrypt_password
     #validates :city_id,  :presence => true
     #validates :sex,  :presence => true

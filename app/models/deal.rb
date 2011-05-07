@@ -11,8 +11,13 @@ class Deal < ActiveRecord::Base
                            :length => { :within => 2..50 }
    validates :city_id, :presence => true
 
-   validates :image, :presence => true
+   
 
+   has_attached_file :photo, :styles => { :normal => "404x250#", :small => ["170x150#", :jpg] },
+		      :default_style => :normal,
+		      :path => ":rails_root/public/system/deals/:attachment/:id/:style/:basename.:extension",
+		      :url => "/system/deals/:attachment/:id/:style/:basename.:extension",
+	       	      :default_url => "/system/deals/:attachment/missing_:style.png"
 
 
     def dealattended?(user)

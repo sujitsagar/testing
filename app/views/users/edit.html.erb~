@@ -1,35 +1,62 @@
 <h1>Edit user</h1>
-<%= `which convert` %><br/>
-<%= `echo $PATH` %>
-
+<% `which convert` %><br/>
+<% `echo $PATH` %>
+<% @cities = City.all %>
+ <% cou = @cities.count %>
+ <% arr = Array.new(cou) { Array.new(2) } %>
+ <% for n in 1..cou %>
+ <% arr[n-1][0] = @cities[n-1].cityname %>
+ <% arr[n-1][1] = n %>
+ <% end %>
+ <% arr %>
 <%= form_for @user , :html => { :multipart => true } do |f| %>
 <%= render 'shared/error_messages', :object => f.object %>
-<div class="field">
-<%= f.label :name %><br />
-<%= f.text_field :name %>
-</div>
-<div class="field">
-<%= f.label :email %><br />
-<%= f.text_field :email %>
-</div>
-<div class="field">
-<%= f.label :password %><br />
-<%= f.password_field :password %>
-</div>
-<div class="field">
-<%= f.label :password_confirmation, "Confirmation" %><br />
-<%= f.password_field :password_confirmation %>
-</div>
-<div class="field">
+  <div class="field">
+  <table border="0" width="400" align="center">
+  
+    <TR><TD width="">
+    First Name
+    </td><td width="50%">
+    <%= f.text_field :name %>
+    </TD></TR>
+ 
+ 
+    <TR><TD>
+    Last Name</td><td>
+    <%= f.text_field :lastname %></TD></TR>
+ 
+    <TR><TD>
+    <%= f.label :email %></td><td>
+    <%= f.text_field :email %></TD></TR>
+ 
+   <TR><TD>
+  <%= f.label :password %></td><td>
+  <%= f.password_field :password %></TD></TR>
+ 
+   <TR><TD>
+  <%= f.label :password_confirmation, "Confirmation" %></td><td>
+  <%= f.password_field :password_confirmation %></TD></TR>
+ 
+   <TR><TD>
+    <%= f.label :city %></td><td>
+    <%= f.select(:city_id, arr ) %></TD></TR>
+
+    <TR><TD>
+    <%= f.label :sex %></td><td>
+    <%= f.select( :sex, [["Male", "Male"], ["Female", "Female"]])%></TD></TR>
+
+    <TR><TD>
+    <%= f.label :birthday_date %></td><td>
+    <%= f.date_select( :birthday_date,:date_separator => "-" , :start_year => 1960 ) %></TD></TR>
+ <TR><TD>
+    <%= f.label :profession %></td><td>
+    <%= f.text_field :profession %></TD></TR>
+  <TR><TD>
+    <%= f.label :company %></td><td>
+    <%= f.text_field :company %></TD></TR>
+ 
+  </table></div><div class="field">
 <%= f.file_field :photo %>
-</div>
-<div class="field">
-<%= f.label :sex %><br />
-<%= f.text_field :sex %>
-</div>
-<div class="field">
-<%= f.label :company %><br />
-<%= f.text_field :company %>
 </div>
 <div class="actions">
 <%= f.submit "Update" %>

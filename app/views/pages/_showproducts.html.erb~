@@ -3,50 +3,48 @@
 <%= will_paginate @feed_items %>
 <% len = @feed_items.length %>
 <table cellspacing="18" border="0" cellpadding="2" align="center">
-<tr><% disp = 0 %>
+<tr>
 <% for n in 1..len %>
 <td>
 <% group = Product.find(@feed_items[n-1].product_id) %>
 <% if !group.nil? %>
-<% disp += 1 %>
-<table border="0" width=180 cellpadding=5  style="text-align:center;border: 1px solid #247885;"><tr><td>
+
+<table border="0" align="center" width="800" cellpadding=5  style="text-align:center;border: 1px solid #247885;"><tr><td width="30%">
 <div style="padding:2px 0px 8px 0px;">
 <a href="<%= user_path(@feed_items[n-1].user) %>" ><%= @feed_items[n-1].user.name %> <%= @feed_items[n-1].user.lastname %></a> likes <br/>
 </div>
 <%= image_tag( group.productimage , :alt => "Group Image", :border => 1 ,:width =>120, :height => 150 ) %>
-</td></tr><tr><td>
-<b style='font-size:13px;'><%= link_to group.productname, group %></b><br/>
-<b style='font-size:11px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b><br/>
-<% pathak = Productlike.where("product_id=?", group.id) %>
-<% pathak = pathak + [] %>
 <% @product = group %>
 <%= render 'products/productlike_form' %>
-<table height=60 border= width=100% cellspacing=0 cellpadding=0>
+</td><td style="text-align:left;padding-left:10px">
+<b style='font-size:16px; align:left;'><%= link_to group.productname, group %></b><br/>
+<b style='font-size:11px;'><%= pluralize( group.productlikes.count, " Liker" ) %></b><br/>
+<p style='font-size:8px;'><%= pluralize( group.productlikes.count, " Liker" ) %></p><br/>
+<% liker = Productlike.where("product_id=?", group.id) %>
+<% liker = liker + [] %>
+
+<table height=60 border=0 width=100% cellspacing=0 cellpadding=0>
 <tr><td>
-<h4 style="text-size:12px;padding:0 0 0 0;margin:0 0 0 0" align='left'>Likes:</h4>
-</td></tr><tr><td>
+<h4 style="text-size:12px;padding:0 0 0 0;margin:0 0 0 0" align='left'>Likers:</h4>
+</td></tr><tr><td> &nbsp;
 <% for z in 0..2 %>
-<%if !pathak[z].nil? %><%= link_to smallgravatar_for(pathak[z].user), pathak[z].user %><% end %>
+<%if !liker[z].nil? %><%= link_to smallgravatar_for(liker[z].user), liker[z].user %><% end %>
 <% end %>
 <%= link_to "more", product_path(group) %>
-</td></tr><!--tr><td>
-
-<% pathak = Productcomment.where("product_id=?", group.id) %>
-<h4 style="text-size:12px;padding:0 0 0 0;margin:0 0 0 0" align='left'>Comments:</h4>
 </td></tr><tr><td>
-       @feed_items = current_user.profeed.paginate(:page => params[:page], :per_page => 32)
-       #@feed_itemstot1 = @feed_items1 && @feed_items2
-<%if !pathak[0].nil? %><% link_to gravatar_for(pathak[0].user), pathak[0].user %>
-<%= pathak[0].content %><% end %>
+<h4 style="text-size:12px;padding:0 0 0 0;margin:0 0 0 0" align='left'>Comments:</h4>
+</td></tr><tr><td style="padding:0 0 0 0;">
+<% comment = Productcomment.where("product_id=?", group.id) %>
+<% comment[z]=comment.last %>&nbsp;
+<% if !comment[z].nil? %><%= link_to smallgravatar_for(comment[z].user), comment[z].user %>
+<%= comment[z].content[0..70] %> ..... <% end %><br/>
 
-<%= link_to "more", product_path(group) %> -->
+<%= link_to "more", product_path(group) %> 
 </td></tr></table>
 </td></tr></table>
-
-
 <% end %>
 </td>
-<% if disp == 4 %></tr></tr><% disp=0 %><% end %>
+</tr><tr>
 <% end %>
 </tr>
 </table>

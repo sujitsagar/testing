@@ -27,7 +27,7 @@
 </style>
 <div class="rounded" id="profile" style="padding-left:30px; padding-top:10px;">
 		<div class="box1 profileimage">
-                <%= gravatar_for @user, :size => 150 %><br/>
+                <%= image_tag @user.photo.url  %><br/>
                 <%= render 'users/follow_form' %>
 
 		</div>

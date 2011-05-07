@@ -1077,5 +1077,131 @@
     <item url=".rspec" uploadstatus="1" />
     <item url="likes1.session" uploadstatus="1" />
     <item url="likes1.webprj" uploadstatus="1" />
+    <item url="app/controllers/subgroups_controller.rb~" uploadstatus="1" />
+    <item url="app/controllers/upload_controller.rb" uploadstatus="1" />
+    <item url="app/helpers/upload_helper.rb" uploadstatus="1" />
+    <item url="app/models/uploadfile.rb" uploadstatus="1" />
+    <item url="app/views/subgroups/new (copy).html.erb" uploadstatus="1" />
+    <item url="app/views/subgroups/new.html.erb~" uploadstatus="1" />
+    <item url="app/views/upload/" uploadstatus="1" />
+    <item url="app/views/upload/uploadfile.html.erb" uploadstatus="1" />
+    <item url="db/migrate/20110505215923_create_uploadfiles.rb" uploadstatus="1" />
+    <item url=".git/logs/refs/remotes/origin/" uploadstatus="1" />
+    <item url=".git/logs/refs/remotes/origin/master" uploadstatus="1" />
+    <item url=".git/objects/07/" uploadstatus="1" />
+    <item url=".git/objects/07/1a7e55a33d78875544ecca9b60bde33fa209aa" uploadstatus="1" />
+    <item url=".git/objects/07/5573d7be80d5382b9ceee5c1b606b91cdac1e7" uploadstatus="1" />
+    <item url=".git/objects/2e/" uploadstatus="1" />
+    <item url=".git/objects/2e/30dd14bd5c337187b005cb55ee6c8e41f88512" uploadstatus="1" />
+    <item url=".git/objects/44/" uploadstatus="1" />
+    <item url=".git/objects/44/408641ac73efa9797581d267de743e805dd711" uploadstatus="1" />
+    <item url=".git/objects/58/" uploadstatus="1" />
+    <item url=".git/objects/58/28b9c93afc56d92a76926040b677851aa25caa" uploadstatus="1" />
+    <item url=".git/objects/59/72727fbeb59ae4e7507c40d3db4fce8456b27a" uploadstatus="1" />
+    <item url=".git/objects/68/" uploadstatus="1" />
+    <item url=".git/objects/68/e64bd094ea2d0e080b88528f1a05b6b26e25ba" uploadstatus="1" />
+    <item url=".git/objects/69/" uploadstatus="1" />
+    <item url=".git/objects/69/cdb7817102f8ca1921a25cd564472cd3c99033" uploadstatus="1" />
+    <item url=".git/objects/6f/" uploadstatus="1" />
+    <item url=".git/objects/6f/08386ad574e60b12a7228c1f61fdbcd4f28579" uploadstatus="1" />
+    <item url=".git/objects/72/" uploadstatus="1" />
+    <item url=".git/objects/72/73d8f8868aba08597960673acdafc95581e879" uploadstatus="1" />
+    <item url=".git/objects/75/" uploadstatus="1" />
+    <item url=".git/objects/75/979b3521a831391bfbd3c685f5264543ed51f5" uploadstatus="1" />
+    <item url=".git/objects/8d/" uploadstatus="1" />
+    <item url=".git/objects/8d/38307c8c700fbb8a979f59bad93b58617e241a" uploadstatus="1" />
+    <item url=".git/objects/8f/" uploadstatus="1" />
+    <item url=".git/objects/8f/036af16f2e86370ded650e8f76b57dbfcb5953" uploadstatus="1" />
+    <item url=".git/objects/8f/3ca2e2daf435edb66e57a0b8681aeda957c865" uploadstatus="1" />
+    <item url=".git/objects/90/" uploadstatus="1" />
+    <item url=".git/objects/90/add3572f9fa47f234b65a445b1e3c05371f63e" uploadstatus="1" />
+    <item url=".git/objects/92/" uploadstatus="1" />
+    <item url=".git/objects/92/ebbf60f7954df35a68f594ebc3ea98f2ece424" uploadstatus="1" />
+    <item url=".git/objects/95/" uploadstatus="1" />
+    <item url=".git/objects/95/fd776de512065083daf9828dad0f32959d5bfa" uploadstatus="1" />
+    <item url=".git/objects/a9/" uploadstatus="1" />
+    <item url=".git/objects/a9/6d24c6bcf4e05133f2ccbad5c5ef385559c72e" uploadstatus="1" />
+    <item url=".git/objects/af/" uploadstatus="1" />
+    <item url=".git/objects/af/f49d617b79b79297089768cf2c8147c0f0dbf8" uploadstatus="1" />
+    <item url=".git/objects/b1/" uploadstatus="1" />
+    <item url=".git/objects/b1/e3a06108d3dc0c2768e984f0a4843c17c52c0b" uploadstatus="1" />
+    <item url=".git/objects/c0/" uploadstatus="1" />
+    <item url=".git/objects/c0/2c6df8149de06ecb02483227458e6821f552fe" uploadstatus="1" />
+    <item url=".git/objects/d2/" uploadstatus="1" />
+    <item url=".git/objects/d2/5f4a17128be6f2abbf7d85509770dd46bbad7a" uploadstatus="1" />
+    <item url=".git/objects/d8/" uploadstatus="1" />
+    <item url=".git/objects/d8/a0a1e8d2aac7cce544e78d8b46760eac00371c" uploadstatus="1" />
+    <item url=".git/objects/db/" uploadstatus="1" />
+    <item url=".git/objects/db/e397ae7fca015642ff9035c91bd3c179d472b7" uploadstatus="1" />
+    <item url=".git/objects/dc/" uploadstatus="1" />
+    <item url=".git/objects/dc/49870b9ff84a6e24cc88297428352231d8407f" uploadstatus="1" />
+    <item url=".git/objects/e0/" uploadstatus="1" />
+    <item url=".git/objects/e0/2e2cf5eb319701299572bfc4458e136f8369ba" uploadstatus="1" />
+    <item url=".git/objects/e7/" uploadstatus="1" />
+    <item url=".git/objects/e7/313a6229149bc1babdbcee50eb1387ed0e7b9a" uploadstatus="1" />
+    <item url=".git/objects/ef/" uploadstatus="1" />
+    <item url=".git/objects/ef/8167f131f12af197f8a16b886ad707305ef2ab" uploadstatus="1" />
+    <item url=".git/objects/ef/96b0688a5fc5c42aa7ffff68d4fe1fd3efa716" uploadstatus="1" />
+    <item url=".git/objects/f0/" uploadstatus="1" />
+    <item url=".git/objects/f0/82572c99d1d1314d4d32c963f1c7ab5d8408d1" uploadstatus="1" />
+    <item url=".git/objects/f2/" uploadstatus="1" />
+    <item url=".git/objects/f2/f242d7cc1faafe01e4dba192f12e4b9dd46180" uploadstatus="1" />
+    <item url=".git/objects/f8/" uploadstatus="1" />
+    <item url=".git/objects/f8/aee91d0a8975211584ed01d54aeaedd30e6a2a" uploadstatus="1" />
+    <item url=".git/objects/f9/" uploadstatus="1" />
+    <item url=".git/objects/f9/cc9ecd6340b02cd8cc9455da9f49eb978ee252" uploadstatus="1" />
+    <item url=".git/objects/fb/" uploadstatus="1" />
+    <item url=".git/objects/fb/c13b2100695eb693170d5de51d0e14787a1101" uploadstatus="1" />
+    <item url=".git/objects/fd/" uploadstatus="1" />
+    <item url=".git/objects/fd/aa9bf6b73c1abd1dc3721448fc590269d65d5d" uploadstatus="1" />
+    <item url=".git/refs/remotes/origin/master" uploadstatus="1" />
+    <item url="public/javascripts/application.js~" uploadstatus="1" />
+    <item url="public/javascripts/jquery.form.js" uploadstatus="1" />
+    <item url="public/stylesheets/countdownstyle.css~" uploadstatus="1" />
+    <item url="spec/controllers/upload_controller_spec.rb" uploadstatus="1" />
+    <item url="spec/helpers/upload_helper_spec.rb" uploadstatus="1" />
+    <item url="spec/models/uploadfile_spec.rb" uploadstatus="1" />
+    <item url="app/controllers/upload_controller.rb~" />
+    <item url="app/models/uploadfile.rb~" />
+    <item url="app/views/upload/uploadfile.html.erb~" />
+    <item url="app/views/users/upload.html.erb~" />
+    <item url="db/migrate/20110507132702_add_photo_to_deals.rb" />
+    <item url="public/system/" />
+    <item url="public/system/users/" />
+    <item url="public/system/users/photos/" />
+    <item url="public/system/users/photos/1/" />
+    <item url="public/system/users/photos/1/normal/" />
+    <item url="public/system/users/photos/1/normal/1293713648500.jpg" />
+    <item url="public/system/users/photos/1/original/" />
+    <item url="public/system/users/photos/1/original/1293713648500.jpg" />
+    <item url="public/system/users/photos/1/small/" />
+    <item url="public/system/users/photos/1/small/1293713648500.jpg" />
+    <item url="public/system/users/photos/missing_small.png" />
+    <item url="public/system/users/photos/missing_thumb.png" />
+    <item url="tmp/pids/server.pid" />
+    <item url="vendor/plugins/image_size/" />
+    <item url="vendor/plugins/image_size/lib/" />
+    <item url="vendor/plugins/image_size/lib/image_size.rb" />
+    <item url="vendor/plugins/image_size/test/" />
+    <item url="vendor/plugins/image_size/test/2-4-7.png" />
+    <item url="vendor/plugins/image_size/test/4_1_2.gif" />
+    <item url="vendor/plugins/image_size/test/bmp.bmp" />
+    <item url="vendor/plugins/image_size/test/cursor.xbm" />
+    <item url="vendor/plugins/image_size/test/detect.swf" />
+    <item url="vendor/plugins/image_size/test/pbm.pbm" />
+    <item url="vendor/plugins/image_size/test/pcx.pcx" />
+    <item url="vendor/plugins/image_size/test/pgm.pgm" />
+    <item url="vendor/plugins/image_size/test/test_helper.rb" />
+    <item url="vendor/plugins/image_size/test/test_image_size.rb" />
+    <item url="vendor/plugins/image_size/test/test.xpm" />
+    <item url="vendor/plugins/image_size/test/tiff.tiff" />
+    <item url="vendor/plugins/image_size/test/tokyo_tower.jpg" />
+    <item url="vendor/plugins/image_size/test/tower_e.psd" />
+    <item url="vendor/plugins/image_size/image_size.gemspec" />
+    <item url="vendor/plugins/image_size/LICENSE.txt" />
+    <item url="vendor/plugins/image_size/Rakefile" />
+    <item url="vendor/plugins/image_size/README.markdown" />
+    <item url="vendor/plugins/image_size/.tmignore" />
+    <item url="vendor/plugins/image_size/VERSION" />
   </project>
 </webproject>

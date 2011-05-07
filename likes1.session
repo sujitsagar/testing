@@ -1,11 +1,21 @@
 <!DOCTYPE webprojectsession>
 <webprojectsession>
   <session usePreviewPrefix="0" previewPrefix="" >
-    <itemcursorpositions>
-      <item line="35" column="27" url="app/controllers/subgroups_controller.rb" />
-      <item line="39" column="34" url="app/views/users/new.html.erb" />
-      <item line="0" column="0" url="app/views/subgroups/new.html.erb" />
-      <item line="0" column="0" url="app/controllers/users_controller.rb" />
-    </itemcursorpositions>
+    <itemcursorpositions/>
+    <treestatus>
+      <openfolder url="public" />
+      <openfolder url="public/javascripts" />
+      <openfolder url="db" />
+      <openfolder url="db/migrate" />
+      <openfolder url="config" />
+      <openfolder url="app" />
+      <openfolder url="app/views" />
+      <openfolder url="app/views/users" />
+      <openfolder url="app/views/upload" />
+      <openfolder url="app/views/layouts" />
+      <openfolder url="app/views/deals" />
+      <openfolder url="app/models" />
+      <openfolder url="app/controllers" />
+    </treestatus>
   </session>
 </webprojectsession>

@@ -36,18 +36,7 @@ class DealsController < ApplicationController
   def create
     
     @deal = Deal.new(params[:deal])
-    @deal.city_id = params[:deal][:city_id]
-    @deal.image = params[:deal][:image]
-    @deal.orignalprice  = params[:deal][:orignalprice]
-    @deal.discount  = params[:deal][:discount]
-    @deal.maxattenders  = params[:deal][:maxattenders]
-    @deal.info1  = params[:deal][:info1]
-    @deal.terms  = params[:deal][:terms]
-    @deal.aboutdeal  = params[:deal][:aboutdeal]
-    @deal.info2  = params[:deal][:info2]
-    @deal.address  = params[:deal][:address]
-    @deal.startat = DateTime.civil(params[:deal]["startat(1i)"].to_i,params[:deal]["startat(2i)"].to_i,params[:deal]["startat(3i)"].to_i,params[:deal]["startat(4i)"].to_i,params[:deal]["startat(5i)"].to_i)
-    @deal.endat = DateTime.civil(params[:deal]["endat(1i)"].to_i,params[:deal]["endat(2i)"].to_i,params[:deal]["endat(3i)"].to_i,params[:deal]["endat(4i)"].to_i,params[:deal]["endat(5i)"].to_i)
+
    if @deal.save
        redirect_to @deal
        flash[:success] = 'Deal was successfully created.'

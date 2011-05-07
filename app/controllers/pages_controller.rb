@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     @title = "Home"
     if signed_in?
        #@feed_items1 = current_user.feed
-       @feed_items = current_user.profeed.paginate(:page => params[:page], :per_page => 32)
+       @feed_items = current_user.profeed.paginate(:page => params[:page], :per_page => 5)
        #@feed_itemstot1 = @feed_items1 && @feed_items2
        #@feed_itemstot = @feed_itemstot1.order('created_at DESC') 
        #@feed_items2 = @feed_items2.paginate(:page => params[:page])
